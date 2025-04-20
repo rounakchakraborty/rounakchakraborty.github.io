@@ -108,7 +108,7 @@
 
     .photo img {
       width: 280px;
-      height: auto;
+      height: 280px; /* Explicit height */
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
@@ -190,7 +190,8 @@
       <p>I’m a Consultant, Project Manager, and Engineer. Welcome to my digital space!</p>
     </div>
     <div class="photo">
-      <img src="rounak.jpg" alt="Rounak Chakraborty">
+      <!-- Use WebP format for better compression and loading speed -->
+      <img src="rounak.webp" alt="Rounak Chakraborty" width="280" height="280" loading="lazy">
     </div>
   </section>
 
