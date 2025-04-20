@@ -1,173 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rounak Chakraborty's personal website" />
+  <meta name="keywords" content="Rounak Chakraborty, Portfolio, Project Manager, MSC, TCS, IIFM, ADBU" />
+  <meta name="author" content="Rounak Chakraborty" />
+  <meta name="robots" content="index, follow" />
   <title>Rounak Chakraborty | Portfolio</title>
-  <meta name="description" content="Portfolio of Rounak Chakraborty">
-  <meta name="keywords" content="Rounak Chakraborty, Portfolio, Project Manager, TCS, IIFM, ADBU">
-  <meta name="author" content="Rounak Chakraborty">
-  <meta name="robots" content="index, follow">
-
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #212121;
-      --primary-color: #00695c;
-      --secondary-color: #004d40;
-      --card-bg: #f5f5f5;
-    }
-
-    body.dark {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --primary-color: #00e676;
-      --secondary-color: #1de9b6;
-      --card-bg: #1e1e1e;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: all 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
     }
 
     header {
-      background-color: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
       color: white;
-      padding: 30px 0;
-      text-align: center;
+      padding: 20px 40px;
     }
 
-    nav {
-      background-color: var(--secondary-color);
-      text-align: center;
-      padding: 10px 0;
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
     }
 
     nav a {
       color: white;
-      margin: 0 20px;
+      margin-left: 30px;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+      font-weight: 500;
+      font-size: 1rem;
     }
 
     nav a:hover {
-      color: var(--primary-color);
-      background: white;
-      padding: 6px 12px;
-      border-radius: 5px;
+      color: #1abc9c;
     }
 
-    .theme-switch {
-      position: absolute;
-      top: 10px;
-      right: 20px;
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 10%;
+      background-color: #ffffff;
+      flex-wrap: wrap;
     }
 
-    .theme-switch button {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
+    .intro {
+      max-width: 50%;
+      min-width: 300px;
     }
 
-    .theme-switch button:hover {
-      background: var(--secondary-color);
+    .intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #1a1a1a;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 30px auto;
-      background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    .intro p {
+      font-size: 1.2rem;
+      color: #555;
     }
 
-    section h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 8px;
-    }
-
-    a {
-      color: var(--primary-color);
+    .photo img {
+      width: 280px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     footer {
-      background: var(--secondary-color);
-      color: white;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
+      padding: 25px;
+      background-color: #1a1a1a;
+      color: #aaa;
+      font-size: 0.9rem;
     }
 
-    .highlight {
-      color: var(--primary-color);
-      font-weight: 600;
+    .social-links {
+      margin: 20px 0;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1abc9c;
+      font-weight: 500;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro, .photo {
+        max-width: 100%;
+      }
+
+      .photo {
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="theme-switch">
-    <button onclick="toggleTheme()">Toggle Theme</button>
-  </div>
 
   <header>
-    <h1>Rounak Chakraborty</h1>
-    <p class="highlight">Aspiring Project Manager | Ex-TCS | IIFM Bhopal</p>
+    <div class="logo">Rounak Chakraborty</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Work</a>
+      <a href="#">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm <strong>Rounak Chakraborty</strong>, currently pursuing an MBA in Forestry Management from IIFM Bhopal. I bring 3 years of experience including my tenure at TCS, with core interests in project management, IT strategy, and sustainability consulting.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Currently working on publishing live projects and case studies here. Stay tuned!</p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience & Education</h2>
-    <p><strong>Assistant System Engineer | TCS (2021–2023)</strong><br>Managed 30+ Oracle EBS servers, ensured 95% uptime, automated operations, and enhanced global IT services.</p>
-    <p><strong>Strategy Intern | Energy Alternatives India (2024)</strong><br>Launched a sustainability portal, created a database of 350+ leaders, and conducted market intelligence studies.</p>
-    <p><strong>Education:</strong><br>
-      MBA (Forestry Management) - IIFM Bhopal (2025)<br>
-      BTech (ECE) - Assam Don Bosco University (2021)</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Location:</strong> Guwahati, Assam, India</p>
-    <p><strong>Email:</strong> rcwordmail@gmail.com | rchakrabortypfm25@iifmbhopal.edu.in</p>
-    <p><strong>Phone:</strong> +91-7086524982</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">rounakchakraborty</a></p>
+  <section class="hero">
+    <div class="intro">
+      <h1>Hello, my name is Rounak Chakraborty</h1>
+      <p>I’m a Project Manager, Sustainability Consultant, and Tech-Enthusiast. Welcome to my digital space!</p>
+    </div>
+    <div class="photo">
+      <img src="rounak.jpg" alt="Rounak Chakraborty">
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Rounak Chakraborty. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">LinkedIn</a>
+      <a href="https://github.com/rounakchakraborty" target="_blank">GitHub</a>
+      <a href="https://twitter.com/XRounak" target="_blank">Twitter</a>
+    </div>
+    <p>© 2025 Rounak Chakraborty</p>
   </footer>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
 </body>
 </html>
