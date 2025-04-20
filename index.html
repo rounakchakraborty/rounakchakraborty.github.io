@@ -9,53 +9,91 @@
   <meta name="author" content="Rounak Chakraborty">
   <meta name="robots" content="index, follow">
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --header-bg: #1f1f1f;
+      --nav-bg: #212121;
+      --accent: #00e676;
+      --link-color: #64ffda;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #ffffff;
+      --text-color: #111;
+      --header-bg: #f0f0f0;
+      --nav-bg: #e0e0e0;
+      --accent: #00695c;
+      --link-color: #00796b;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #121212;
-      color: #e0e0e0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
     }
+
     header {
-      background: #1f1f1f;
-      color: #00e676;
+      background: var(--header-bg);
+      color: var(--accent);
       padding: 30px 0;
       text-align: center;
     }
+
     nav {
-      background: #212121;
+      background: var(--nav-bg);
       padding: 10px 0;
       text-align: center;
     }
+
     nav a {
-      color: #ffffff;
+      color: var(--text-color);
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #00e676;
+      color: var(--accent);
     }
+
+    .toggle-theme {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      padding: 5px 10px;
+      background-color: var(--accent);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     section {
       padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
-      background: #1e1e1e;
-      margin-top: 20px;
+      margin: 20px auto;
+      background: var(--header-bg);
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 128, 0.1);
     }
+
     a {
-      color: #64ffda;
+      color: var(--link-color);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
-      background: #1f1f1f;
-      color: #888;
+      background: var(--header-bg);
+      color: #aaa;
       text-align: center;
       padding: 15px 0;
       margin-top: 30px;
@@ -63,7 +101,9 @@
     }
   </style>
 </head>
-<body>
+<body data-theme="dark">
+
+<button class="toggle-theme" onclick="toggleTheme()">Switch Theme</button>
 
 <header>
   <h1>Rounak Chakraborty</h1>
@@ -73,6 +113,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -86,15 +127,31 @@
   <p>I'm currently adding content here. Soon you’ll find case studies, live project links, and more.</p>
 </section>
 
+<section id="resume">
+  <h2>Resume Highlights</h2>
+  <p><strong>Education:</strong> MBA in Forestry Management (IIFM, 3.14/4.33), BTech in ECE (ADBU, 7.79/10)</p>
+  <p><strong>Experience:</strong> 2 yrs @ TCS | 3 internships including MoEF&CC, EAI, and NTPC | Fieldwork with CFCCD</p>
+  <p><strong>Skills:</strong> PM, IT Ops, Data Analysis, Python, ESG, Agile, Leadership, Communication</p>
+  <p><strong>Certifications:</strong> Google PM, ESG Forage, Agile Forage, Business Analysis (LinkedIn)</p>
+</section>
+
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: rounak@example.com</p>
+  <p>Email: rcwordmail@gmail.com | rchakrabortypfm25@iifmbhopal.edu.in</p>
   <p>LinkedIn: <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">rounakchakraborty</a></p>
 </section>
 
 <footer>
   <p>&copy; 2025 Rounak Chakraborty. All rights reserved.</p>
 </footer>
+
+<script>
+  function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+  }
+</script>
 
 </body>
 </html>
