@@ -10,41 +10,39 @@
   <meta name="robots" content="index, follow">
   <style>
     :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #00e676;
+      --section-bg: #f5f5f5;
+      --link-color: #1e88e5;
+    }
+
+    body.dark-mode {
       --bg-color: #121212;
       --text-color: #e0e0e0;
-      --header-bg: #1f1f1f;
-      --nav-bg: #212121;
-      --accent: #00e676;
+      --accent-color: #00e676;
+      --section-bg: #1e1e1e;
       --link-color: #64ffda;
     }
 
-    [data-theme="light"] {
-      --bg-color: #ffffff;
-      --text-color: #111;
-      --header-bg: #f0f0f0;
-      --nav-bg: #e0e0e0;
-      --accent: #00695c;
-      --link-color: #00796b;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: var(--bg-color);
       color: var(--text-color);
-      transition: all 0.3s ease;
+      transition: all 0.3s ease-in-out;
     }
 
     header {
-      background: var(--header-bg);
-      color: var(--accent);
+      background: var(--section-bg);
+      color: var(--accent-color);
       padding: 30px 0;
       text-align: center;
     }
 
     nav {
-      background: var(--nav-bg);
+      background: var(--bg-color);
       padding: 10px 0;
       text-align: center;
     }
@@ -58,26 +56,15 @@
     }
 
     nav a:hover {
-      color: var(--accent);
-    }
-
-    .toggle-theme {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      padding: 5px 10px;
-      background-color: var(--accent);
-      border: none;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
+      color: var(--accent-color);
     }
 
     section {
       padding: 40px 20px;
       max-width: 900px;
-      margin: 20px auto;
-      background: var(--header-bg);
+      margin: auto;
+      background: var(--section-bg);
+      margin-top: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 128, 0.1);
     }
@@ -92,18 +79,32 @@
     }
 
     footer {
-      background: var(--header-bg);
-      color: #aaa;
+      background: var(--section-bg);
+      color: #888;
       text-align: center;
       padding: 15px 0;
       margin-top: 30px;
       font-size: 14px;
     }
+
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: var(--accent-color);
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
   </style>
 </head>
-<body data-theme="dark">
+<body>
 
-<button class="toggle-theme" onclick="toggleTheme()">Switch Theme</button>
+<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
 <header>
   <h1>Rounak Chakraborty</h1>
@@ -113,7 +114,6 @@
 <nav>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -127,17 +127,9 @@
   <p>I'm currently adding content here. Soon you’ll find case studies, live project links, and more.</p>
 </section>
 
-<section id="resume">
-  <h2>Resume Highlights</h2>
-  <p><strong>Education:</strong> MBA in Forestry Management (IIFM, 3.14/4.33), BTech in ECE (ADBU, 7.79/10)</p>
-  <p><strong>Experience:</strong> 2 yrs @ TCS | 3 internships including MoEF&CC, EAI, and NTPC | Fieldwork with CFCCD</p>
-  <p><strong>Skills:</strong> PM, IT Ops, Data Analysis, Python, ESG, Agile, Leadership, Communication</p>
-  <p><strong>Certifications:</strong> Google PM, ESG Forage, Agile Forage, Business Analysis (LinkedIn)</p>
-</section>
-
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: rcwordmail@gmail.com | rchakrabortypfm25@iifmbhopal.edu.in</p>
+  <p>Email: rcwordmail@gmail.com</p>
   <p>LinkedIn: <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">rounakchakraborty</a></p>
 </section>
 
@@ -147,9 +139,7 @@
 
 <script>
   function toggleTheme() {
-    const body = document.body;
-    const currentTheme = body.getAttribute('data-theme');
-    body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+    document.body.classList.toggle("dark-mode");
   }
 </script>
 
