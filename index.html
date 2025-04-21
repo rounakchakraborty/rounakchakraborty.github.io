@@ -37,26 +37,18 @@
 
   <title>Rounak Chakraborty | Portfolio</title>
   <style>
-    :root {
-      --bg-color: #f5f7fa;
-      --text-color: #333;
-      --header-bg: #1a1a1a;
-      --link-color: #1abc9c;
-      --footer-color: #aaa;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: #f5f7fa;
+      color: #333;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--header-bg);
+      background-color: #1a1a1a;
       color: white;
       padding: 20px 40px;
       flex-wrap: wrap;
@@ -74,26 +66,11 @@
       cursor: pointer;
     }
 
-    .search-icon {
-      display: none;
-      font-size: 1.6rem;
-      cursor: pointer;
-      margin-left: 20px;
-    }
-
-    .right-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: auto;
-    }
-
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 10px;
-      width: 100%;
     }
 
     nav a {
@@ -106,7 +83,7 @@
     }
 
     nav a:hover {
-      color: var(--link-color);
+      color: #1abc9c;
     }
 
     .hero {
@@ -152,8 +129,8 @@
     footer {
       text-align: center;
       padding: 25px;
-      background-color: var(--header-bg);
-      color: var(--footer-color);
+      background-color: #1a1a1a;
+      color: #aaa;
       font-size: 0.9rem;
     }
 
@@ -164,7 +141,7 @@
     .social-links a {
       margin: 0 10px;
       text-decoration: none;
-      color: var(--link-color);
+      color: #1abc9c;
       font-weight: 500;
     }
 
@@ -177,24 +154,22 @@
         display: block;
         position: absolute;
         top: 25px;
-        right: 20px;
-      }
-
-      .search-icon {
-        display: block;
-        position: absolute;
-        top: 25px;
-        right: 80px;
+        right: 30px;
       }
 
       nav {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
         display: none;
       }
 
       nav.show {
         display: flex;
+      }
+
+      nav a {
+        margin: 8px 20px;
       }
 
       .hero {
@@ -209,22 +184,23 @@
       .photo {
         margin-top: 30px;
       }
-
-      .right-controls {
-        position: absolute;
-        right: 60px;
-        top: 25px;
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">Rounak Chakraborty</div>
-    <div class="right-controls">
-      <div class="search-icon" onclick="searchSite()">🔍</div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
+      <a href="https://buymeacoffee.com/rounakchakraborty" target="_blank">Support Me</a>
+      <a href="sitemap.html">Site Map</a>
+    </nav>
   </header>
 
   <section class="hero">
@@ -249,13 +225,6 @@
   <script>
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("show");
-    }
-
-    function searchSite() {
-      let query = prompt("Enter your search term:");
-      if (query && query.length > 2) {
-        window.find(query);
-      }
     }
   </script>
 </body>
