@@ -11,8 +11,7 @@
   <meta property="og:description" content="Project Manager, Consultant, and Tech Enthusiast. Explore my work and expertise." />
   <meta property="og:image" content="https://rounakchakraborty.com/rounak.jpg">
   <meta property="og:url" content="https://rounakchakraborty.com">
-  
-  <!-- Structured Data (Schema Markup) -->
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,7 +32,6 @@
     }
   </script>
 
-  <!-- Favicon + Apple Touch Icon -->
   <link rel="icon" type="image/png" href="wave-hand.png" />
   <link rel="apple-touch-icon" href="wave-hand.png" />
 
@@ -54,11 +52,18 @@
       color: white;
       padding: 20px 40px;
       flex-wrap: wrap;
+      position: relative;
     }
 
     .logo {
       font-size: 1.6rem;
       font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
     }
 
     nav {
@@ -145,21 +150,26 @@
     }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+      .hamburger {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
       }
 
       nav {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        margin-top: 10px;
+        display: none;
+      }
+
+      nav.show {
+        display: flex;
       }
 
       nav a {
-        margin: 8px 0;
+        margin: 8px 20px;
       }
 
       .hero {
@@ -180,7 +190,8 @@
 <body>
   <header>
     <div class="logo">Rounak Chakraborty</div>
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
       <a href="#home">Home</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -198,7 +209,6 @@
       <p>I’m a Consultant, Project Manager, and Engineer. Welcome to my digital space!</p>
     </div>
     <div class="photo">
-      <!-- Image on the right with appropriate size -->
       <img src="rounak.jpg" alt="Rounak Chakraborty" width="250" height="250" loading="lazy">
     </div>
   </section>
@@ -211,5 +221,11 @@
     </div>
     <p>© 2025 Rounak Chakraborty</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
