@@ -1,3 +1,4 @@
+/* style.css */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,10 +24,12 @@ header {
 }
 
 .logo-img {
-  height: 30px;
-  width: 30px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   transition: transform 0.3s ease;
+  vertical-align: middle;
+  margin-bottom: -2px;
 }
 
 .logo-img:hover {
@@ -168,8 +171,9 @@ footer {
   }
 
   .logo-img {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
+    margin-bottom: -2px;
   }
 
   .logo {
