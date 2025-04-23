@@ -11,7 +11,7 @@ header {
   align-items: center;
   background-color: #1a1a1a;
   color: white;
-  padding: 20px 40px;
+  padding: 15px 25px; /* Adjusted padding to reduce size */
   flex-wrap: wrap;
   position: relative;
 }
@@ -19,12 +19,12 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 20px; /* ✅ increased gap for desktop spacing */
+  gap: 15px; /* Reduced gap for aesthetic alignment */
 }
 
 .logo-img {
-  height: 40px;
-  width: 40px;
+  height: 30px; /* Reduced size */
+  width: 30px; /* Reduced size */
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -38,8 +38,7 @@ header {
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.4rem; /* Reduced font size */
 }
 
 .hamburger {
@@ -57,11 +56,11 @@ nav {
 
 nav a {
   color: white;
-  margin-left: 20px;
-  margin-top: 10px;
+  margin-left: 15px; /* Reduced margin */
+  margin-top: 8px; /* Reduced margin */
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Reduced font size */
 }
 
 nav a:hover {
@@ -72,7 +71,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 10%;
+  padding: 60px 8%; /* Reduced padding for a tighter layout */
   background-color: #ffffff;
   flex-wrap: wrap;
 }
@@ -83,13 +82,13 @@ nav a:hover {
 }
 
 .intro h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* Reduced font size */
   margin-bottom: 10px;
   color: #1a1a1a;
 }
 
 .intro p {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced font size */
   color: #555;
 }
 
@@ -97,7 +96,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 300px;
+  max-width: 250px; /* Reduced photo container size */
   margin-top: 20px;
 }
 
@@ -110,18 +109,18 @@ nav a:hover {
 
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 20px;
   background-color: #1a1a1a;
   color: #aaa;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Reduced font size */
 }
 
 .social-links {
-  margin: 20px 0;
+  margin: 15px 0; /* Reduced margin */
 }
 
 .social-links a {
-  margin: 0 10px;
+  margin: 0 8px; /* Reduced margin */
   text-decoration: none;
   color: #1abc9c;
   font-weight: 500;
@@ -135,8 +134,8 @@ footer {
   .hamburger {
     display: block;
     position: absolute;
-    top: 25px;
-    right: 30px;
+    top: 20px;
+    right: 25px; /* Adjusted position */
   }
 
   nav {
@@ -169,15 +168,15 @@ footer {
   }
 
   .logo-img {
-    height: 30px;
-    width: 30px; /* ✅ fixed the size for mobile screens */
+    height: 25px; /* Adjusted for mobile size */
+    width: 25px; /* Adjusted for mobile size */
   }
 
   .logo {
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Adjusted for mobile size */
   }
 
   .logo-container {
-    gap: 12px; /* ✅ adjusted gap slightly for better look on mobile */
+    gap: 10px; /* Adjusted gap for mobile */
   }
 }
