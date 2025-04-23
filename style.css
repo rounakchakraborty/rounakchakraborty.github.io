@@ -11,7 +11,7 @@ header {
   align-items: center;
   background-color: #1a1a1a;
   color: white;
-  padding: 15px 25px; /* Adjusted padding to reduce size */
+  padding: 15px 25px;
   flex-wrap: wrap;
   position: relative;
 }
@@ -19,12 +19,12 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 15px; /* Reduced gap for aesthetic alignment */
+  gap: 15px;
 }
 
 .logo-img {
-  height: 30px; /* Reduced size */
-  width: 30px; /* Reduced size */
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -38,7 +38,7 @@ header {
 }
 
 .logo {
-  font-size: 1.4rem; /* Reduced font size */
+  font-size: 1.4rem;
 }
 
 .hamburger {
@@ -56,11 +56,11 @@ nav {
 
 nav a {
   color: white;
-  margin-left: 15px; /* Reduced margin */
-  margin-top: 8px; /* Reduced margin */
+  margin-left: 15px;
+  margin-top: 8px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem; /* Reduced font size */
+  font-size: 0.9rem;
 }
 
 nav a:hover {
@@ -71,7 +71,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 8%; /* Reduced padding for a tighter layout */
+  padding: 60px 8%;
   background-color: #ffffff;
   flex-wrap: wrap;
 }
@@ -82,13 +82,13 @@ nav a:hover {
 }
 
 .intro h1 {
-  font-size: 2.2rem; /* Reduced font size */
+  font-size: 2.2rem;
   margin-bottom: 10px;
   color: #1a1a1a;
 }
 
 .intro p {
-  font-size: 1rem; /* Reduced font size */
+  font-size: 1rem;
   color: #555;
 }
 
@@ -96,7 +96,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px; /* Reduced photo container size */
+  max-width: 250px;
   margin-top: 20px;
 }
 
@@ -112,15 +112,15 @@ footer {
   padding: 20px;
   background-color: #1a1a1a;
   color: #aaa;
-  font-size: 0.8rem; /* Reduced font size */
+  font-size: 0.8rem;
 }
 
 .social-links {
-  margin: 15px 0; /* Reduced margin */
+  margin: 15px 0;
 }
 
 .social-links a {
-  margin: 0 8px; /* Reduced margin */
+  margin: 0 8px;
   text-decoration: none;
   color: #1abc9c;
   font-weight: 500;
@@ -135,7 +135,7 @@ footer {
     display: block;
     position: absolute;
     top: 20px;
-    right: 25px; /* Adjusted position */
+    right: 25px;
   }
 
   nav {
@@ -168,15 +168,15 @@ footer {
   }
 
   .logo-img {
-    height: 25px; /* Adjusted for mobile size */
-    width: 25px; /* Adjusted for mobile size */
+    height: 25px;
+    width: 25px;
   }
 
   .logo {
-    font-size: 1.2rem; /* Adjusted for mobile size */
+    font-size: 1.2rem;
   }
 
   .logo-container {
-    gap: 10px; /* Adjusted gap for mobile */
+    gap: 10px;
   }
 }
