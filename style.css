@@ -19,7 +19,7 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px; /* ✅ increased gap for desktop spacing */
 }
 
 .logo-img {
@@ -170,7 +170,7 @@ footer {
 
   .logo-img {
     height: 30px;
-    width: 30px;
+    width: 30px; /* ✅ fixed the size for mobile screens */
   }
 
   .logo {
@@ -178,6 +178,6 @@ footer {
   }
 
   .logo-container {
-    gap: 10px;
+    gap: 12px; /* ✅ adjusted gap slightly for better look on mobile */
   }
 }
