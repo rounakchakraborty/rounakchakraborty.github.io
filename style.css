@@ -19,12 +19,12 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 .logo-img {
   height: 40px;
   width: 40px;
-  margin-right: 12px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -166,5 +166,18 @@ footer {
 
   .photo {
     margin-top: 30px;
+  }
+
+  .logo-img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .logo-container {
+    gap: 10px;
   }
 }
