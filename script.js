@@ -1,9 +1,9 @@
-\function toggleMenu() {
+function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
 function hideAll() {
-  ['homeSection','workSection','aboutSection','contactSection']
+  ['homeSection', 'workSection', 'aboutSection', 'contactSection']
     .forEach(id => document.getElementById(id).classList.add('hidden'));
 }
 
@@ -27,7 +27,6 @@ function showContact() {
   document.getElementById('contactSection').classList.remove('hidden');
 }
 
-// called when user clicks Download Resume button
 function downloadResume() {
   window.location.href = 'Rounak_Chakraborty_Resume.pdf';
 }
@@ -37,5 +36,5 @@ function submitForm(event) {
   alert('Thank you for contacting me!');
 }
 
-// initialize with Home visible
+// Initialize with Home visible
 document.addEventListener('DOMContentLoaded', showHome);
