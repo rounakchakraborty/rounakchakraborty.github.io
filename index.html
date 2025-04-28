@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://rounakchakraborty.com/thumbnail.png" />
   <meta property="og:url" content="https://rounakchakraborty.com" />
   <meta property="og:see_also" content="https://www.linkedin.com/in/rounakchakraborty/" />
-  
+
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
@@ -30,8 +30,8 @@
     <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">☰</div>
     <nav id="navMenu" role="navigation">
       <a href="#" onclick="showHome()">Home</a>
-      <a href="#" onclick="openAbout()">About</a>
-      <a href="#" onclick="openContact()">Contact</a>
+      <a href="#aboutSection" onclick="scrollToSection('aboutSection')">About</a>
+      <a href="#contactSection" onclick="scrollToSection('contactSection')">Contact</a>
       <a href="https://buymeacoffee.com/rounakchakraborty" target="_blank" rel="noopener noreferrer">Support Me</a>
       <a href="sitemap.html">Site Map</a>
     </nav>
@@ -56,7 +56,7 @@
         <h1>About Me</h1>
         <p>I am a professional with expertise in engineering, project management, and sustainability. I help organizations transition toward net-zero, future-ready operations by bridging Technology, Management, and Sustainability.</p>
         <p>My approach is grounded in the principles of the Triple Bottom Line: People, Planet, and Profit.</p>
-        <a href="resume.pdf" download>Download Resume</a>
+        <a href="resume.pdf" download="Rounak_Chakraborty_Resume.pdf">Download Resume</a>
       </div>
     </section>
 
@@ -64,12 +64,12 @@
     <section class="contact hidden" id="contactSection">
       <div class="intro">
         <h1>Contact Me</h1>
-        <form id="contactForm" action="mailto:rounak@example.com" method="post" enctype="text/plain">
+        <form id="contactForm" action="#" method="POST" onsubmit="submitForm(event)">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required autocomplete="on"/>
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required autocomplete="on"/>
 
           <button type="submit">Send</button>
         </form>
