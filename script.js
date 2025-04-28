@@ -2,39 +2,39 @@ function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-function hideAll() {
-  ['homeSection', 'workSection', 'aboutSection', 'contactSection']
-    .forEach(id => document.getElementById(id).classList.add('hidden'));
-}
-
 function showHome() {
-  hideAll();
-  document.getElementById('homeSection').classList.remove('hidden');
+  document.getElementById("homeSection").classList.remove("hidden");
+  document.getElementById("workSection").classList.add("hidden");
+  document.getElementById("aboutSection").classList.add("hidden");
+  document.getElementById("contactSection").classList.add("hidden");
 }
 
 function showWork() {
-  hideAll();
-  document.getElementById('workSection').classList.remove('hidden');
+  document.getElementById("workSection").classList.remove("hidden");
+  document.getElementById("homeSection").classList.add("hidden");
+  document.getElementById("aboutSection").classList.add("hidden");
+  document.getElementById("contactSection").classList.add("hidden");
 }
 
 function showAbout() {
-  hideAll();
-  document.getElementById('aboutSection').classList.remove('hidden');
+  document.getElementById("aboutSection").classList.remove("hidden");
+  document.getElementById("homeSection").classList.add("hidden");
+  document.getElementById("workSection").classList.add("hidden");
+  document.getElementById("contactSection").classList.add("hidden");
 }
 
 function showContact() {
-  hideAll();
-  document.getElementById('contactSection').classList.remove('hidden');
+  document.getElementById("contactSection").classList.remove("hidden");
+  document.getElementById("homeSection").classList.add("hidden");
+  document.getElementById("workSection").classList.add("hidden");
+  document.getElementById("aboutSection").classList.add("hidden");
 }
 
 function downloadResume() {
-  window.location.href = 'Rounak_Chakraborty_Resume.pdf';
+  window.location.href = 'https://yourresumeurl.com'; // Update this link
 }
 
 function submitForm(event) {
   event.preventDefault();
-  alert('Thank you for contacting me!');
+  alert("Your message has been sent!");
 }
-
-// Initialize with Home visible
-document.addEventListener('DOMContentLoaded', showHome);
