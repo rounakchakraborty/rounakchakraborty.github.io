@@ -1,32 +1,17 @@
+// Toggle navigation menu on mobile
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('show');
 }
 
-function hideAll() {
-  ['homeSection', 'workSection', 'aboutSection', 'contactSection']
-    .forEach(id => document.getElementById(id).classList.add('hidden'));
+// Form submission (mocked)
+function submitForm(event) {
+  event.preventDefault();
+  alert('Form Submitted!');
 }
 
-function showHome() {
-  hideAll();
-  document.getElementById('homeSection').classList.remove('hidden');
-}
-
-function showWork() {
-  hideAll();
-  document.getElementById('workSection').classList.remove('hidden');
-}
-
-function showAbout() {
-  hideAll();
-  document.getElementById('aboutSection').classList.remove('hidden');
-}
-
-function showContact() {
-  hideAll();
-  document.getElementById('contactSection').classList.remove('hidden');
-}
-
+// Resume download
 function downloadResume() {
-  window.location.href = 'Rounak_Chakraborty_Resume.pdf';
+  const resumeLink = 'path_to_resume.pdf'; // Update with actual resume file path
+  window.location.href = resumeLink;
 }
