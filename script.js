@@ -27,6 +27,10 @@ function showContact() {
   document.getElementById('contactSection').classList.remove('hidden');
 }
 
+function showSiteMap() {
+  window.location.href = 'sitemap.html';
+}
+
 function downloadResume() {
   window.location.href = 'Rounak_Chakraborty_Resume.pdf';
 }
