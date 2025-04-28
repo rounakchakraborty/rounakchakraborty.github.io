@@ -3,8 +3,8 @@ function toggleMenu() {
 }
 
 function hideAll() {
-  const sections = ['homeSection','workSection','aboutSection','blogSection','contactSection','resumeSection'];
-  sections.forEach(id => document.getElementById(id).classList.add('hidden'));
+  ['homeSection', 'workSection', 'aboutSection', 'blogSection', 'contactSection', 'resumeSection']
+    .forEach(id => document.getElementById(id).classList.add('hidden'));
 }
 
 function showHome() {
