@@ -1,16 +1,22 @@
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
+  const navMenu = document.getElementById('navMenu');
+  if (navMenu.classList.contains('show')) {
+    navMenu.classList.remove('show');
+    navMenu.classList.add('hidden');
+  } else {
+    navMenu.classList.remove('hidden');
+    navMenu.classList.add('show');
+  }
+}
+
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    toggleMenu();
+  }
 }
 
 function openAbout() {
-  // Hide the home section and show the about section
-  document.getElementById("home").classList.add("hidden");
-  document.getElementById("aboutSection").classList.remove("hidden");
-}
-
-// Function to open home section
-function openHome() {
-  // Hide the about section and show the home section
-  document.getElementById("aboutSection").classList.add("hidden");
-  document.getElementById("home").classList.remove("hidden");
+  const aboutSection = document.getElementById('aboutSection');
+  aboutSection.classList.remove('hidden');
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
 }
