@@ -28,9 +28,9 @@
     </div>
     <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">☰</div>
     <nav id="navMenu" role="navigation">
-      <a href="#home" onclick="showSection('home')">Home</a>
-      <a href="#about" onclick="showSection('about')">About</a>
+      <a href="#home">Home</a>
       <a href="#work">Work</a>
+      <a href="#about" onclick="openAbout()">About</a>
       <a href="#contact">Contact</a>
       <a href="https://buymeacoffee.com/rounakchakraborty" target="_blank" rel="noopener noreferrer">Support Me</a>
       <a href="sitemap.html">Site Map</a>
@@ -49,13 +49,13 @@
       </div>
     </section>
 
-    <section class="hero" id="about" style="display: none;">
+    <section class="about" id="aboutSection" style="display: none;">
       <div class="intro">
         <h1>Hi, my name is Rounak Chakraborty</h1>
         <p>I am a professional with expertise in engineering, project management, and sustainability, dedicated to driving organizations toward net-zero, future-ready operations. By aligning strategy with innovation, I develop data-driven solutions that enhance business performance while advancing environmental and social impact.</p>
         <p>Grounded in the principles of the Triple Bottom Line - People, Planet, and Profit, I collaborate with stakeholders to navigate challenges, unlock growth opportunities, and implement scalable initiatives. My focus is on creating measurable outcomes that are both economically viable and socially responsible, fostering resilience and long-term success.</p>
-        <p><strong>Bridging Technology, Management, and Sustainability.</strong></p>
-        <a href="resume.pdf" class="resume-link" download>Download My Resume</a>
+        <p>Bridging Technology, Management, and Sustainability.</p>
+        <a href="resume.pdf" download>Download Resume</a>
       </div>
       <div class="photo">
         <img src="rounak.jpg" alt="Portrait of Rounak Chakraborty" width="250" height="250" loading="lazy">
@@ -72,6 +72,15 @@
     <p>© 2025 Rounak Chakraborty. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+
+    function openAbout() {
+      document.getElementById("aboutSection").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  </script>
 </body>
 </html>
