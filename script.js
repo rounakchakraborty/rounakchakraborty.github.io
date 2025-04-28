@@ -1,17 +1,25 @@
-// Toggle navigation menu on mobile
+// Toggle navigation menu
 function toggleMenu() {
-  const nav = document.getElementById('navMenu');
-  nav.classList.toggle('show');
+  const navMenu = document.getElementById('navMenu');
+  navMenu.classList.toggle('show');
 }
 
-// Form submission (mocked)
+// Show relevant section
+function showSection(section) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => sec.classList.add('hidden'));
+
+  const activeSection = document.getElementById(`${section}Section`);
+  activeSection.classList.remove('hidden');
+}
+
+// Resume Download (Placeholder)
+function downloadResume() {
+  window.location.href = 'path_to_your_resume.pdf';
+}
+
+// Submit contact form (Placeholder)
 function submitForm(event) {
   event.preventDefault();
-  alert('Form Submitted!');
-}
-
-// Resume download
-function downloadResume() {
-  const resumeLink = 'path_to_resume.pdf'; // Update with actual resume file path
-  window.location.href = resumeLink;
+  alert('Thank you for reaching out!');
 }
