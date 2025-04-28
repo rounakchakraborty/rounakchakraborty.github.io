@@ -39,8 +39,10 @@ header {
   transform: scale(0.95);
 }
 
-.logo {
+.logo-text {
   font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
 }
 
 .hamburger {
@@ -175,7 +177,7 @@ footer {
     margin-bottom: -2px;
   }
 
-  .logo {
+  .logo-text {
     font-size: 1.2rem;
   }
 
