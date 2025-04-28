@@ -1,20 +1,20 @@
 function toggleMenu() {
-  var menu = document.getElementById("navMenu");
-  menu.classList.toggle("open");
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
 }
 
-function showHome() {
-  document.getElementById("homeSection").scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  section.classList.remove('hidden');
-  section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 function submitForm(event) {
   event.preventDefault();
-  alert('Thank you for contacting me! I will get back to you soon.');
-  document.getElementById('contactForm').reset();
+  alert('Thank you for contacting me!');
+}
+
+function showHome() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
