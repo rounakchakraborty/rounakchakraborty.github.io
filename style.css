@@ -68,7 +68,7 @@ nav a:hover {
   color: #1abc9c;
 }
 
-.hero {
+.hero, .about, .contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,7 +130,7 @@ footer {
   text-decoration: underline;
 }
 
-/* Hide About and Contact initially */
+/* Hide sections initially */
 .hidden {
   display: none;
 }
