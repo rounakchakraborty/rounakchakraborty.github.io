@@ -2,39 +2,31 @@ function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
+function hideAll() {
+  ['homeSection', 'workSection', 'aboutSection', 'contactSection']
+    .forEach(id => document.getElementById(id).classList.add('hidden'));
+}
+
 function showHome() {
-  document.getElementById("homeSection").classList.remove("hidden");
-  document.getElementById("workSection").classList.add("hidden");
-  document.getElementById("aboutSection").classList.add("hidden");
-  document.getElementById("contactSection").classList.add("hidden");
+  hideAll();
+  document.getElementById('homeSection').classList.remove('hidden');
 }
 
 function showWork() {
-  document.getElementById("workSection").classList.remove("hidden");
-  document.getElementById("homeSection").classList.add("hidden");
-  document.getElementById("aboutSection").classList.add("hidden");
-  document.getElementById("contactSection").classList.add("hidden");
+  hideAll();
+  document.getElementById('workSection').classList.remove('hidden');
 }
 
 function showAbout() {
-  document.getElementById("aboutSection").classList.remove("hidden");
-  document.getElementById("homeSection").classList.add("hidden");
-  document.getElementById("workSection").classList.add("hidden");
-  document.getElementById("contactSection").classList.add("hidden");
+  hideAll();
+  document.getElementById('aboutSection').classList.remove('hidden');
 }
 
 function showContact() {
-  document.getElementById("contactSection").classList.remove("hidden");
-  document.getElementById("homeSection").classList.add("hidden");
-  document.getElementById("workSection").classList.add("hidden");
-  document.getElementById("aboutSection").classList.add("hidden");
+  hideAll();
+  document.getElementById('contactSection').classList.remove('hidden');
 }
 
 function downloadResume() {
-  window.location.href = 'https://yourresumeurl.com'; // Update this link
-}
-
-function submitForm(event) {
-  event.preventDefault();
-  alert("Your message has been sent!");
+  window.location.href = 'Rounak_Chakraborty_Resume.pdf';
 }
