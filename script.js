@@ -1,25 +1,49 @@
-// Toggle navigation menu
+// script.js
+
+// Toggle navigation menu on mobile
 function toggleMenu() {
-  const navMenu = document.getElementById('navMenu');
-  navMenu.classList.toggle('show');
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('show');
 }
 
-// Show relevant section
-function showSection(section) {
+// Smoothly show only the targeted section
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('navMenu');
+  const links = nav.querySelectorAll('a[href^="#"]');
   const sections = document.querySelectorAll('section');
-  sections.forEach(sec => sec.classList.add('hidden'));
 
-  const activeSection = document.getElementById(`${section}Section`);
-  activeSection.classList.remove('hidden');
-}
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      // allow external links (like buymeacoffee) to work normally
+      if (!link.getAttribute('href').startsWith('#')) return;
+      e.preventDefault();
 
-// Resume Download (Placeholder)
-function downloadResume() {
-  window.location.href = 'path_to_your_resume.pdf';
-}
+      // hide all sections
+      sections.forEach(sec => sec.classList.add('hidden'));
 
-// Submit contact form (Placeholder)
+      // show the one we clicked
+      const targetID = link.getAttribute('href');
+      const targetSection = document.querySelector(targetID);
+      if (targetSection) {
+        targetSection.classList.remove('hidden');
+      }
+
+      // collapse mobile menu if open
+      if (nav.classList.contains('show')) {
+        nav.classList.remove('show');
+      }
+    });
+  });
+});
+
+// Form submission (mocked)
 function submitForm(event) {
   event.preventDefault();
-  alert('Thank you for reaching out!');
+  alert('Form Submitted!');
+}
+
+// Resume download
+function downloadResume() {
+  // Make sure you have "resume.pdf" in your repo root
+  window.location.href = 'resume.pdf';
 }
