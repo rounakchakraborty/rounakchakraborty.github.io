@@ -203,3 +203,15 @@ footer {
   font-size: 1rem;
   color: #555;
 }
+
+section {
+  transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
