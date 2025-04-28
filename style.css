@@ -110,6 +110,22 @@ nav a:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.resume-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+  background-color: #16a085;
+}
+
 footer {
   text-align: center;
   padding: 20px;
