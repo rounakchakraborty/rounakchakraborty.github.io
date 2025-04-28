@@ -14,3 +14,12 @@ function openHome() {
   document.getElementById("aboutSection").classList.add("hidden");
   document.getElementById("home").classList.remove("hidden");
 }
+function toggleMenu() {
+  var nav = document.getElementById("navMenu");
+  nav.classList.toggle("show");
+}
+
+function openAbout() {
+  var aboutSection = document.getElementById("aboutSection");
+  aboutSection.classList.toggle("hidden");
+}
