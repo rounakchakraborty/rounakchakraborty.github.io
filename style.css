@@ -151,4 +151,28 @@ footer {
 }
 
 .social-links a {
-  margin: 0 10px
+  margin: 0 10px;
+  color: #bbb;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+}
