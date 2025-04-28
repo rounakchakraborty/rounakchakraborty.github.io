@@ -1,6 +1,6 @@
 function toggleMenu() {
-  const nav = document.getElementById('navMenu');
-  nav.classList.toggle('show');
+  const navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("show");
 }
 
 function showHome() {
