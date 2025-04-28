@@ -1,3 +1,5 @@
+/* style.css */
+
 /* Base */
 body {
   margin: 0;
@@ -7,6 +9,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enable smooth in-page scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -72,6 +79,11 @@ nav a {
 nav a:hover,
 nav a:focus {
   background-color: rgba(255,255,255,0.1);
+}
+
+/* Hide sections by default */
+.hidden {
+  display: none;
 }
 
 /* Sections */
