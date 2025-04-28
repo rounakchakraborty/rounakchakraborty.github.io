@@ -3,12 +3,14 @@ function toggleMenu() {
 }
 
 function openAbout() {
-  document.getElementById("aboutSection").style.display = "block";
-  document.getElementById("home").style.display = "none";
+  // Hide the home section and show the about section
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("aboutSection").classList.remove("hidden");
 }
 
 // Function to open home section
 function openHome() {
-  document.getElementById("home").style.display = "block";
-  document.getElementById("aboutSection").style.display = "none";
+  // Hide the about section and show the home section
+  document.getElementById("aboutSection").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
 }
