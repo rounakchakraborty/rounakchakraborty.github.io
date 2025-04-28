@@ -1,22 +1,20 @@
 function toggleMenu() {
-  const navMenu = document.getElementById("navMenu");
-  navMenu.classList.toggle("show");
+  var menu = document.getElementById("navMenu");
+  menu.classList.toggle("open");
 }
 
 function showHome() {
-  document.getElementById('homeSection').classList.remove('hidden');
-  document.getElementById('aboutSection').classList.add('hidden');
-  document.getElementById('contactSection').classList.add('hidden');
+  document.getElementById("homeSection").scrollIntoView({ behavior: 'smooth' });
 }
 
-function openAbout() {
-  document.getElementById('homeSection').classList.add('hidden');
-  document.getElementById('aboutSection').classList.remove('hidden');
-  document.getElementById('contactSection').classList.add('hidden');
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  section.classList.remove('hidden');
+  section.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function openContact() {
-  document.getElementById('homeSection').classList.add('hidden');
-  document.getElementById('aboutSection').classList.add('hidden');
-  document.getElementById('contactSection').classList.remove('hidden');
+function submitForm(event) {
+  event.preventDefault();
+  alert('Thank you for contacting me! I will get back to you soon.');
+  document.getElementById('contactForm').reset();
 }
