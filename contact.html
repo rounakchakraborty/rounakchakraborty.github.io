@@ -1,0 +1,50 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Rounak Chakraborty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="logo.png" class="logo-img" alt="Logo" /></a>
+      <div class="logo-text"><b>Rounak Chakraborty</b></div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://buymeacoffee.com/rounakchakraborty" target="_blank">Support Me</a>
+      <a href="sitemap.html">Site Map</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="intro">
+      <h1>Contact Me</h1>
+      <form id="contactForm" action="#" method="POST" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autocomplete="on" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="on" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">LinkedIn</a>
+      <a href="https://github.com/rounakchakraborty" target="_blank">GitHub</a>
+      <a href="https://twitter.com/XRounak" target="_blank">Twitter</a>
+    </div>
+    <p>© 2025 Rounak Chakraborty</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
