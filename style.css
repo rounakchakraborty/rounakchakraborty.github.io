@@ -16,23 +16,26 @@ header {
   align-items: center;
   background-color: #1a1a1a;
   color: white;
-  padding: 14px 30px; /* 🔧 UPDATED: reduced padding */
+  padding: 14px 30px;
   flex-wrap: wrap;
   position: relative;
 }
 
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* ✅ Slight downward alignment of logo */
   gap: 15px;
+  padding-top: 4px; /* ✅ Slight push down */
 }
 
 .logo-img {
-  height: 40px; /* 🔧 UPDATED: slightly increased for better vertical alignment */
-  width: 40px;
+  height: 42px; /* ✅ Slightly increased size */
+  width: 42px;
   border-radius: 50%;
   transition: transform 0.3s ease;
   object-fit: cover;
+  position: relative;
+  top: 2px; /* ✅ Slight downward nudge */
 }
 
 .logo-img:hover { transform: scale(1.1); }
@@ -41,7 +44,9 @@ header {
 .logo-text {
   font-size: 1.6rem;
   font-weight: bold;
-  line-height: 1; /* 🔧 UPDATED: helps with vertical centering */
+  line-height: 1;
+  position: relative;
+  top: 2px; /* ✅ Align with slightly dropped logo */
 }
 
 .hamburger {
@@ -142,7 +147,7 @@ button:focus {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px; /* 🔧 UPDATED: reduced padding for cleaner look */
+  padding: 20px;
   background-color: #1a1a1a;
   color: #aaa;
   font-size: 0.9rem;
