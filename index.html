@@ -3,21 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hello, I'm Rounak Chakraborty — I bridge technology, management, and sustainability to deliver data-driven, net-zero solutions for future-ready organizations." />
+  <meta name="description" content="Hello, I'm Rounak Chakraborty — Portfolio showcasing my work in management, technology, and sustainability." />
   <meta name="author" content="Rounak Chakraborty" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Rounak Chakraborty | Portfolio" />
-  <meta property="og:description" content="Project Manager | Consultant | Tech Enthusiast" />
-  <meta property="og:image" content="images/rounak.jpg" />
-  <meta property="og:url" content="https://rounakchakraborty.com" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="apple-touch-icon" href="images/favicon.png" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <title>Rounak Chakraborty | Portfolio</title>
 </head>
@@ -25,27 +15,23 @@
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Rounak Chakraborty Logo" class="logo-img" />
-      </a>
+      <img src="images/logo.png" alt="Logo" class="logo-img" />
       <span class="logo-text">Rounak Chakraborty</span>
     </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav id="navMenu">
-      <a href="#home" class="active">Home</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-      <a href="documents/Rounak_Chakraborty_Resume.pdf" target="_blank">Resume</a>
-      <a href="sitemap.html">Site Map</a>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('work')">Work</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+      <a href="#" onclick="showSection('sitemap')">Site Map</a>
     </nav>
   </header>
 
-  <!-- HERO / HOME / ABOUT -->
-  <section class="hero" id="home">
+  <!-- HOME -->
+  <section class="section" id="home">
     <div class="intro">
       <h1>Hello, I’m <span class="highlight">Rounak Chakraborty</span></h1>
       <p>Project Manager • Consultant • Tech Enthusiast</p>
-      <button onclick="downloadResume()">📄 Download Resume</button>
     </div>
     <div class="photo">
       <img src="images/rounak.jpg" alt="Rounak Chakraborty" />
@@ -53,35 +39,41 @@
   </section>
 
   <!-- WORK -->
-  <section id="work">
-    <h2>Work Experience</h2>
-    <div class="work-card">
-      <h3><a href="https://www.microsave.net/" target="_blank">Microsave Consulting</a></h3>
-      <span>Associate, Data & AI Team</span>
-      <p>Driving digital transformation projects with a focus on data strategy and AI solutions.</p>
+  <section class="section hidden" id="work">
+    <h2>Experience</h2>
+    <div class="work-grid">
+      <div class="work-card"><p><b>Associate – AI & Data</b><br>MicroSave Consulting</p></div>
+      <div class="work-card"><p><b>Project Intern</b><br>IFWCS “PRAMAAN”</p></div>
+      <div class="work-card"><p><b>Strategy Consulting Intern</b><br>Energy Alternatives India</p></div>
+      <div class="work-card"><p><b>Field Work</b><br>Chhattisgarh Government</p></div>
+      <div class="work-card"><p><b>Assistant System Engineer</b><br>TCS</p></div>
+      <div class="work-card"><p><b>Student Intern</b><br>NTPC Limited</p></div>
     </div>
-    <div class="work-card">
-      <h3><a href="https://forest.cg.gov.in/" target="_blank">Forest & Climate Change Department, Govt. of Chhattisgarh</a></h3>
-      <span>Consulting Project</span>
-      <p>Worked on sustainability-focused projects integrating policy, forestry, and climate strategies.</p>
-    </div>
-    <div class="work-card">
-      <h3><a href="https://www.tcs.com/" target="_blank">Tata Consultancy Services (TCS)</a></h3>
-      <span>Assistant System Engineer</span>
-      <p>22 months of IT & operations experience including automation, risk compliance, and server management.</p>
+    <div class="resume-btn">
+      <button onclick="downloadResume()">📄 Download Resume</button>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section class="section hidden" id="contact">
     <h2>Contact Me</h2>
-    <p>Let’s connect! Feel free to reach out through the form below.</p>
     <form onsubmit="submitForm(event)">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit">Send</button>
     </form>
+  </section>
+
+  <!-- SITE MAP -->
+  <section class="section hidden" id="sitemap">
+    <h2>Site Map</h2>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('work')">Work</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      <li><a href="documents/Rounak_Chakraborty_Resume.pdf" target="_blank">Resume</a></li>
+    </ul>
   </section>
 
   <!-- FOOTER -->
@@ -94,7 +86,6 @@
     <p>© 2025 Rounak Chakraborty</p>
   </footer>
 
-  <!-- JS -->
   <script src="script.js" defer></script>
 </body>
 </html>
