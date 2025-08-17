@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   line-height: 1.6;
 }
 
@@ -14,9 +14,10 @@ header {
   align-items: center;
   padding: 15px 30px;
   background: #000;
-  border-bottom: 1px solid #333;
+  color: #fff;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -42,7 +43,6 @@ header {
   cursor: pointer;
 }
 
-/* Nav */
 nav {
   display: flex;
   gap: 15px;
@@ -56,7 +56,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ccc;
+  color: #aaa;
 }
 
 nav a.active {
@@ -82,35 +82,82 @@ nav a.active {
 }
 
 .highlight {
-  color: #ccc;
-}
-
-.intro p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  color: #555;
 }
 
 .photo img {
   max-width: 280px;
   border-radius: 8px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
 }
 
-/* Button */
-button {
-  margin-top: 20px;
-  padding: 10px 18px;
-  background: #fff;
+/* Sections */
+section {
+  padding: 60px 10%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.work-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+.work-card h3 a {
   color: #000;
-  border: none;
+  text-decoration: none;
+}
+
+.work-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 18px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #ccc;
+  background: #333;
 }
 
 /* Footer */
@@ -118,7 +165,7 @@ footer {
   text-align: center;
   padding: 20px;
   background: #000;
-  border-top: 1px solid #333;
+  color: #fff;
   font-size: 0.9rem;
 }
 
@@ -145,20 +192,16 @@ footer {
     background: #000;
     padding: 10px;
   }
-
   nav.show {
     display: flex;
   }
-
   .hamburger {
     display: block;
   }
-
   .hero {
     flex-direction: column;
     text-align: center;
   }
-
   .intro {
     max-width: 100%;
   }
