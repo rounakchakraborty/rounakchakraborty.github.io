@@ -1,22 +1,11 @@
+// Toggle Menu (for future hamburger menu)
 function toggleMenu() {
-  const nav = document.getElementById('navMenu');
-  nav.classList.toggle('show');
+  const nav = document.querySelector("header nav");
+  nav.classList.toggle("show");
 }
 
-function showSection(sectionId) {
-  document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-  document.getElementById(sectionId).classList.remove('hidden');
-
-  // close mobile menu after click
-  const nav = document.getElementById('navMenu');
-  nav.classList.remove('show');
-}
-
-function submitForm(event) {
-  event.preventDefault();
-  alert('Form submitted successfully!');
-}
-
-function downloadResume() {
-  window.open('documents/Rounak_Chakraborty_Resume.pdf', '_blank');
-}
+// Mock contact form
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thanks! Your message has been submitted.");
+});
