@@ -1,85 +1,84 @@
-/* Reset */
+/* Global */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   box-sizing: border-box;
-}
-
-/* Body */
-body {
   font-family: "Segoe UI", sans-serif;
+}
+body {
   background: #fff;
-  color: #111;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #000;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  padding: 12px 50px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
-.logo-container {
+header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.logo-img {
-  height: 40px;
-  width: auto;
-}
-
-.logo-text {
-  font-size: 18px;
   font-weight: bold;
+  font-size: 1.1rem;
 }
-
-.hamburger {
-  display: none;
-  font-size: 22px;
-  cursor: pointer;
+header .logo img {
+  height: 35px;
 }
-
-nav a {
+header nav a {
+  margin-left: 25px;
   color: #fff;
-  margin-left: 15px;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s;
 }
-
-nav a:hover {
-  text-decoration: underline;
+header nav a:hover {
+  color: #1e90ff;
 }
 
 /* Sections */
 .section {
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2 {
   text-align: center;
-  background: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
-
-.hidden {
-  display: none;
-}
-
 .highlight {
-  color: #0073e6;
+  color: #1e90ff;
 }
 
-.photo img {
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 220px;
-  height: 220px;
+/* Home Section */
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro-text {
+  max-width: 50%;
+}
+.intro-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.intro-photo img {
+  width: 260px;
+  height: 260px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Work Section */
@@ -88,74 +87,59 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 40px;
 }
-
 .work-card {
-  border: 2px solid #000;
+  border: 1px solid #000;
   padding: 20px;
-  width: 220px;
-  background: #fafafa;
+  border-radius: 6px;
+  width: 250px;
   text-align: center;
-  border-radius: 5px;
+  transition: 0.3s;
 }
-
+.work-card:hover {
+  background: #f8f8f8;
+  transform: translateY(-5px);
+}
 .resume-btn {
-  margin-top: 30px;
+  text-align: center;
 }
-
-.resume-btn button {
+.resume-btn a {
+  background: #000;
+  color: #fff;
   padding: 10px 20px;
-  border: none;
-  background: #000;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.resume-btn button:hover {
-  background: #444;
-}
-
-/* Contact Section */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
-
-button[type="submit"] {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button[type="submit"]:hover {
-  background: #444;
-}
-
-/* Sitemap */
-.sitemap-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sitemap-links a {
+  border-radius: 6px;
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
+  font-weight: bold;
+}
+.resume-btn a:hover {
+  background: #1e90ff;
+}
+
+/* Contact */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form button {
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #1e90ff;
 }
 
 /* Footer */
@@ -163,37 +147,18 @@ footer {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
+  padding: 15px;
+  font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav {
-    display: none;
+  #home {
     flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
+    text-align: center;
   }
-
-  nav.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .work-grid {
-    flex-direction: column;
-    align-items: center;
+  .intro-text {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
