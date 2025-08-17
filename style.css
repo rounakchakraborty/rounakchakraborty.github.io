@@ -1,164 +1,54 @@
 /* Global */
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-body {
-  background: #fff;
-  color: #222;
-  line-height: 1.6;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+body { background: #fff; color: #222; }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  padding: 12px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display: flex; justify-content: space-between; align-items: center;
+  background: #000; color: #fff;
+  padding: 12px 40px;
 }
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-header .logo img {
-  height: 35px;
-}
-header nav a {
-  margin-left: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-header nav a:hover {
-  color: #1e90ff;
-}
+header .logo { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+header .logo img { height: 30px; }
+header nav a { margin-left: 25px; color: #fff; text-decoration: none; font-weight: 500; }
+header nav a:hover { color: #1e90ff; }
 
 /* Sections */
-.section {
-  min-height: 100vh;
-  padding: 80px 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-.highlight {
-  color: #1e90ff;
-}
+.section { display: none; min-height: calc(100vh - 100px); padding: 60px 10%; }
+.section.active { display: flex; justify-content: space-between; align-items: center; }
+h2 { text-align: center; margin-bottom: 30px; }
+.highlight { color: #1e90ff; }
 
-/* Home Section */
-#home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.intro-text {
-  max-width: 50%;
-}
-.intro-text h1 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-.intro-photo img {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+/* Home */
+#home { flex-direction: row; }
+.intro-text { max-width: 50%; }
+.intro-photo img { max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 
-/* Work Section */
-.work-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 40px;
-}
+/* Work */
+.work-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px; }
 .work-card {
-  border: 1px solid #000;
-  padding: 20px;
-  border-radius: 6px;
-  width: 250px;
-  text-align: center;
-  transition: 0.3s;
+  border: 1px solid #000; padding: 20px; border-radius: 6px;
+  width: 250px; text-align: center; transition: 0.3s;
 }
-.work-card:hover {
-  background: #f8f8f8;
-  transform: translateY(-5px);
-}
-.resume-btn {
-  text-align: center;
-}
+.work-card:hover { background: #f8f8f8; transform: translateY(-4px); }
+.resume-btn { text-align: center; margin-top: 20px; }
 .resume-btn a {
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+  background: #000; color: #fff; padding: 10px 20px; border-radius: 6px;
+  text-decoration: none; font-weight: bold;
 }
-.resume-btn a:hover {
-  background: #1e90ff;
-}
+.resume-btn a:hover { background: #1e90ff; }
 
 /* Contact */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-form input, form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-form button {
-  padding: 12px;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-form button:hover {
-  background: #1e90ff;
-}
+form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+form input, form textarea { padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+form button { padding: 12px; background: #000; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+form button:hover { background: #1e90ff; }
 
 /* Footer */
-footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-}
+footer { background: #000; color: #fff; text-align: center; padding: 15px; font-size: 0.9rem; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-  }
-  .intro-text {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
+  .section.active { flex-direction: column; text-align: center; }
+  .intro-text { max-width: 100%; margin-bottom: 20px; }
 }
