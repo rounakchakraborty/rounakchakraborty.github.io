@@ -16,7 +16,7 @@ header {
   align-items: center;
   background-color: #1a1a1a;
   color: white;
-  padding: 14px 30px; /* 🔧 UPDATED: reduced padding */
+  padding: 14px 30px;
   flex-wrap: wrap;
   position: relative;
 }
@@ -28,7 +28,7 @@ header {
 }
 
 .logo-img {
-  height: 40px; /* 🔧 UPDATED: slightly increased for better vertical alignment */
+  height: 40px;
   width: 40px;
   border-radius: 50%;
   transition: transform 0.3s ease;
@@ -41,7 +41,7 @@ header {
 .logo-text {
   font-size: 1.6rem;
   font-weight: bold;
-  line-height: 1; /* 🔧 UPDATED: helps with vertical centering */
+  line-height: 1;
 }
 
 .hamburger {
@@ -74,6 +74,10 @@ nav a {
 nav a:hover,
 nav a:focus {
   background-color: rgba(255,255,255,0.1);
+}
+
+nav a.active {
+  background-color: rgba(255,255,255,0.2);
 }
 
 /* Sections */
@@ -142,7 +146,7 @@ button:focus {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px; /* 🔧 UPDATED: reduced padding for cleaner look */
+  padding: 20px;
   background-color: #1a1a1a;
   color: #aaa;
   font-size: 0.9rem;
@@ -176,5 +180,89 @@ footer {
     display: none;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* ========================= */
+/* 🎨 Work Section Styling   */
+/* ========================= */
+#workSection {
+  background-color: #f5f7fa;
+  text-align: left;
+  padding: 60px 8%;
+}
+
+#workSection h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+#workSection p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.work-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.work-card:nth-child(1) { animation-delay: 0.1s; }
+.work-card:nth-child(2) { animation-delay: 0.2s; }
+.work-card:nth-child(3) { animation-delay: 0.3s; }
+.work-card:nth-child(4) { animation-delay: 0.4s; }
+.work-card:nth-child(5) { animation-delay: 0.5s; }
+.work-card:nth-child(6) { animation-delay: 0.6s; }
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.work-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.work-card h3 a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.work-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.work-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.work-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
