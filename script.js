@@ -1,11 +1,14 @@
-// Toggle Menu (for future hamburger menu)
-function toggleMenu() {
-  const nav = document.querySelector("header nav");
-  nav.classList.toggle("show");
+// Show only one section at a time
+function showSection(id) {
+  document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
 }
 
-// Mock contact form
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Thanks! Your message has been submitted.");
+// Contact form dummy
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Thanks! Your message has been submitted.");
+  });
 });
