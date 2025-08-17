@@ -32,16 +32,16 @@
     </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav id="navMenu">
-      <a href="index.html" class="active">Home</a>
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
       <a href="documents/Rounak_Chakraborty_Resume.pdf" target="_blank">Resume</a>
+      <a href="sitemap.html">Site Map</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO / HOME / ABOUT -->
+  <section class="hero" id="home">
     <div class="intro">
       <h1>Hello, I’m <span class="highlight">Rounak Chakraborty</span></h1>
       <p>Project Manager • Consultant • Tech Enthusiast</p>
@@ -50,6 +50,38 @@
     <div class="photo">
       <img src="images/rounak.jpg" alt="Rounak Chakraborty" />
     </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <h2>Work Experience</h2>
+    <div class="work-card">
+      <h3><a href="https://www.microsave.net/" target="_blank">Microsave Consulting</a></h3>
+      <span>Associate, Data & AI Team</span>
+      <p>Driving digital transformation projects with a focus on data strategy and AI solutions.</p>
+    </div>
+    <div class="work-card">
+      <h3><a href="https://forest.cg.gov.in/" target="_blank">Forest & Climate Change Department, Govt. of Chhattisgarh</a></h3>
+      <span>Consulting Project</span>
+      <p>Worked on sustainability-focused projects integrating policy, forestry, and climate strategies.</p>
+    </div>
+    <div class="work-card">
+      <h3><a href="https://www.tcs.com/" target="_blank">Tata Consultancy Services (TCS)</a></h3>
+      <span>Assistant System Engineer</span>
+      <p>22 months of IT & operations experience including automation, risk compliance, and server management.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect! Feel free to reach out through the form below.</p>
+    <form onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
