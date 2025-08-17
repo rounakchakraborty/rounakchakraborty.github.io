@@ -1,47 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
-  <title>Site Map | Rounak Chakraborty</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo-container">
-      <a href="index.html"><img src="logo.png" alt="Logo" class="logo-img" /></a>
-      <div class="logo-text"><b>Rounak Chakraborty</b></div>
-    </div>
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://buymeacoffee.com/rounakchakraborty" target="_blank">Support Me</a>
-      <a href="sitemap.html" class="active">Site Map</a>
-    </nav>
-  </header>
-
-  <main class="sitemap-container">
-    <h1>Site Map</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://buymeacoffee.com/rounakchakraborty" target="_blank">Support Me</a></li>
-      <li><a href="sitemap.html">Site Map</a></li>
-    </ul>
-  </main>
-
-  <footer>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/rounakchakraborty" target="_blank">LinkedIn</a>
-      <a href="https://github.com/rounakchakraborty" target="_blank">GitHub</a>
-      <a href="https://twitter.com/XRounak" target="_blank">Twitter</a>
-    </div>
-    <p>© 2025 Rounak Chakraborty</p>
-  </footer>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rounakchakraborty.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://rounakchakraborty.com/index.html#work</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rounakchakraborty.com/index.html#contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rounakchakraborty.com/documents/Rounak_Chakraborty_Resume.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://rounakchakraborty.com/sitemap.html</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
