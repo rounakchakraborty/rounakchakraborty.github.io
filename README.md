@@ -9,28 +9,51 @@ It highlights my professional journey, interests, and aspirations in a clean, re
 
 ## 👨‍💼 About Me
 
-I’m **Rounak Chakraborty (He/Him)** — Associate, **AI & Data** at [MicroSave Consulting (MSC)](https://www.microsave.net/).  
-Formerly an **Assistant Systems Engineer at [Tata Consultancy Services (TCS)](https://www.tcs.com/)**, I bring along **22 months of experience in IT operations and digital solutions**.  
+I’m **Rounak Chakraborty (He/Him)** — **Associate, AI & Data at MicroSave Consulting (MSC)**.  
+Previously, I worked as an **Assistant Systems Engineer at Tata Consultancy Services (TCS)**.  
 
-🎓 Education:  
+🎓 **Education**  
 - **MBA/PGDFM ’25** – [Indian Institute of Forest Management (IIFM), Bhopal](https://iifm.ac.in/home)  
 - **B.Tech. (ECE) ’21** – [Assam Don Bosco University (ADBU)](https://www.dbuniversity.ac.in/)  
 
-🔹 Member of the **International Association of Engineers (IAENG)**  
-🔹 Associate Member of the **Institution of Engineers (India) [AMIE]**
+🔹 Member – **International Association of Engineers (IAENG)**  
+🔹 Associate Member – **Institution of Engineers (India) [AMIE]**
 
-My focus areas include **project management, impact evaluation, sustainability, AI-driven digital transformation, and consulting.**
+I solve problems not just with logic, but with **purpose**.  
+For me, sustainability isn’t a checkbox; it’s the lens through which I approach every challenge.  
+
+---
+
+## 💼 Professional Experience
+
+- **Associate – AI & Data, MicroSave Consulting (MSC)**  
+- **Assistant Systems Engineer, Tata Consultancy Services (TCS)**  
+
+---
+
+## 🏅 Licenses & Certifications (Selected)
+
+- **Member** – International Association of Engineers (IAENG)  
+- **Associate Member (AMIE)** – Institution of Engineers (India)  
+- **CSRD Fundamentals + VSME Standard** – CSRD Institute  
+- **Python Programming Expert** – Edureka  
+- **Six Sigma White Belt** – CSSC  
+- **Google Project Management Specialization** – Google  
+- **Google AI Essentials** – Google  
+- **ignio Foundation Certified** – Digitate (Expired)  
+
+*(Full list on [LinkedIn](https://linkedin.com/in/rounakchakraborty))*  
 
 ---
 
 ## 🚀 Website Features
 
-- ✨ Custom-built with HTML5 + CSS3 (no frameworks)
-- 📱 Fully responsive design for mobile & desktop
-- 🧠 SEO Optimized – Meta Tags, Robots.txt, Sitemap
-- 🔍 Integrated with Google Search Console
-- 📸 Includes Favicon and Social Links
-- 🌐 [Sitemap](https://rounakchakraborty.com/sitemap.html) for easy navigation
+- ✨ Built with **HTML5 + CSS3** (no frameworks)  
+- 📱 **Responsive** for mobile & desktop  
+- 🧠 **SEO Optimized** – meta tags, robots.txt, sitemap.xml  
+- 🔍 Integrated with **Google Search Console**  
+- 📸 Includes **favicon & social links**  
+- 🌐 Dedicated [Sitemap](https://rounakchakraborty.com/sitemap.html)  
 
 ---
 
@@ -49,7 +72,7 @@ My focus areas include **project management, impact evaluation, sustainability, 
 - 💼 [LinkedIn](https://linkedin.com/in/rounakchakraborty)  
 - 🖥 [GitHub](https://github.com/rounakchakraborty)  
 - 🐦 [Twitter](https://twitter.com/XRounak)  
-- ☕ [Support Me on Buy Me a Coffee](https://buymeacoffee.com/rounakchakraborty)  
+- ☕ [Buy Me a Coffee](https://buymeacoffee.com/rounakchakraborty)  
 
 ---
 
