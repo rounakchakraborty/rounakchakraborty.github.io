@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home -->
+  <!-- Homepage -->
   <url>
     <loc>https://rounakchakraborty.com/</loc>
     <lastmod>2025-08-18</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- Work -->
-  <url>
-    <loc>https://rounakchakraborty.com/#work</loc>
-    <lastmod>2025-08-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://rounakchakraborty.com/#contact</loc>
-    <lastmod>2025-08-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Site Map -->
+  <!-- Human-readable site map page (optional) -->
   <url>
     <loc>https://rounakchakraborty.com/sitemap.html</loc>
     <lastmod>2025-08-18</lastmod>
     <priority>0.5</priority>
   </url>
 
-  <!-- Resume -->
+  <!-- Resume PDF (optional; Google can index PDFs) -->
   <url>
     <loc>https://rounakchakraborty.com/documents/Rounak_Chakraborty_Resume.pdf</loc>
     <lastmod>2025-08-18</lastmod>
