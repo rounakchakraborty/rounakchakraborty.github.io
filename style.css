@@ -54,6 +54,8 @@ a:visited { color: inherit; }
 /* ===== Header ===== */
 .site-header { position: sticky; top: 0; z-index: 1000; background: #000; color: #fff; }
 .header-inner {
+  width: min(var(--container-max), 92%);
+  margin-inline: auto;
   display: flex; align-items: center; justify-content: space-between;
   min-height: var(--bar-height);
   padding-left: var(--header-left);
@@ -61,14 +63,20 @@ a:visited { color: inherit; }
 }
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo-img { height: 38px; }
-.logo-text { font-weight: 800; color: #fff; }
+.logo-text {
+  font-weight: 800; color: #fff;
+  font-size: 1.15rem; /* +15% */
+}
 
-/* Desktop nav: flush to the right edge of the container */
+/* Desktop nav aligned with photo edge */
 .nav-desktop {
   display: flex; align-items: center; justify-content: flex-end;
   gap: 28px;                         /* spacing between the links */
 }
-.nav-desktop a { color: #fff; font-weight: 600; }
+.nav-desktop a {
+  color: #fff; font-weight: 600;
+  font-size: 1.15rem; /* +15% */
+}
 .nav-desktop a:hover { color: #1e90ff; }
 
 /* Mobile toggle */
@@ -84,7 +92,11 @@ a:visited { color: inherit; }
   display: grid; gap: 6px;
   padding: 12px 0; background: #000;
 }
-.nav-mobile a { color: #fff; padding: 12px var(--content-left); font-weight: 600; }
+.nav-mobile a {
+  color: #fff; padding: 12px var(--content-left);
+  font-weight: 600;
+  font-size: 1.15rem; /* +15% */
+}
 
 /* ===== Sections ===== */
 main { flex: 1; }
@@ -152,6 +164,8 @@ h2 {
 
 /* links row + copyright stacked */
 .footer-inner {
+  width: min(var(--container-max), 92%);
+  margin-inline: auto;
   min-height: calc(var(--bar-height) + 10px);
   display: flex;
   flex-direction: column;
@@ -176,6 +190,7 @@ h2 {
   color: #fff;
   opacity: .95;
   font-weight: 600;
+  font-size: 1.15rem; /* +15% */
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -188,7 +203,7 @@ h2 {
 }
 
 .footer-copy {
-  font-size: 0.95rem;
+  font-size: 1.15rem; /* +15%, matches header/footer links */
   opacity: .9;
   text-align: center;
 }
