@@ -3,12 +3,13 @@
   --bar-height: 72px;               /* desktop header/footer height */
   --container-max: 1100px;
 
-  /* separate guides for header vs content */
-  --header-left: clamp(20px, 4vw, 40px);   /* push logo more left */
-  --header-right: clamp(20px, 4vw, 40px);  /* push nav more right */
+  /* one set of guides shared by header + content (perfect alignment) */
+  --content-left: clamp(60px, 7vw, 100px);   /* body text + logo start here */
+  --content-right: clamp(60px, 7vw, 100px);  /* photo edge + nav end here */
 
-  --content-left: clamp(60px, 7vw, 100px); /* body text aligned under logo */
-  --content-right: clamp(60px, 7vw, 100px);/* photo aligned under nav */
+  /* header uses the same guides */
+  --header-left: var(--content-left);
+  --header-right: var(--content-right);
 }
 
 /* ===== Reset / Base ===== */
@@ -61,15 +62,28 @@ a:visited { color: inherit; }
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo-img { height: 38px; }
 .logo-text { font-weight: 800; color: #fff; }
-.nav-desktop a { color: #fff; font-weight: 600; margin-left: 28px; }
+
+/* Desktop nav: flush to the right edge of the container */
+.nav-desktop {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 28px;                         /* spacing between the links */
+}
+.nav-desktop a { color: #fff; font-weight: 600; }
 .nav-desktop a:hover { color: #1e90ff; }
 
 /* Mobile toggle */
-.nav-toggle { display: none; width: 44px; height: 44px; border: 1px solid #222; border-radius: 10px; background: transparent; cursor: pointer; }
+.nav-toggle {
+  display: none; width: 44px; height: 44px;
+  border: 1px solid #222; border-radius: 10px; background: transparent; cursor: pointer;
+}
 .nav-toggle .bar { display:block; height:2px; margin:6px 8px; background:#fff; }
 
 /* Mobile drawer */
-.nav-mobile { position: sticky; top: var(--bar-height); display: grid; gap: 6px; padding: 12px 0; background: #000; }
+.nav-mobile {
+  position: sticky; top: var(--bar-height);
+  display: grid; gap: 6px;
+  padding: 12px 0; background: #000;
+}
 .nav-mobile a { color: #fff; padding: 12px var(--content-left); font-weight: 600; }
 
 /* ===== Sections ===== */
@@ -105,13 +119,15 @@ h2 {
   font-size: clamp(1.8rem, 3.2vw + 0.9rem, 3.6rem);
   font-weight: 900;
   margin-bottom: 12px;
-  color: #444;
+  color: #444;                       /* “Hello, I’m” dark grey */
 }
-.hero-title .hero-name { color: #000 !important; }
+.hero-title .hero-name { color: #000 !important; } /* name pitch black */
 .hero-subtitle {
   font-size: clamp(0.9rem, 1.1vw + 0.65rem, 1.3rem);
   color: #444;
 }
+
+/* Photo right edge aligns with container's right guide */
 .intro-photo { justify-self: end; }
 .intro-photo img {
   width: 340px;
