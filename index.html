@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rounak Chakraborty | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -16,7 +16,6 @@
         <span class="logo-text">Rounak Chakraborty</span>
       </a>
 
-      <!-- Desktop Nav -->
       <nav class="nav-desktop">
         <a href="#" onclick="showSection('home')">Home</a>
         <a href="#" onclick="showSection('work')">Work</a>
@@ -24,13 +23,11 @@
         <a href="sitemap.html">Site Map</a>
       </nav>
 
-      <!-- Mobile Menu Button -->
       <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
     </div>
 
-    <!-- Mobile Nav Drawer -->
     <nav class="nav-mobile" id="mobileMenu" hidden>
       <a href="#" onclick="closeMobile(); showSection('home')">Home</a>
       <a href="#" onclick="closeMobile(); showSection('work')">Work</a>
@@ -44,11 +41,13 @@
     <section id="home" class="section active">
       <div class="container hero">
         <div class="intro-text">
-          <h1 class="hero-title">Hello, I’m <span class="highlight">Rounak Chakraborty</span></h1>
+          <h1 class="hero-title">
+            Hello, I’m <span class="highlight">Rounak Chakraborty</span>
+          </h1>
           <p class="hero-subtitle">Management • Technology • Sustainability</p>
         </div>
         <div class="intro-photo">
-          <img src="images/rounak.jpg" alt="Rounak Chakraborty">
+          <img src="images/rounak.jpg" alt="Rounak Chakraborty" />
         </div>
       </div>
     </section>
@@ -62,7 +61,7 @@
           <div class="work-card"><strong>Project Intern</strong><br>IFWCS “PRAMAAN”</div>
           <div class="work-card"><strong>Strategy Consulting Intern</strong><br>Energy Alternatives India</div>
           <div class="work-card"><strong>Field Work</strong><br>Chhattisgarh Government</div>
-          <div class="work-card"><strong>Assistant System Engineer</strong><br>Tata Consultancy Services</div>
+          <div class="work-card"><strong>Assistant System Engineer</strong><br>TCS</div>
           <div class="work-card"><strong>Student Intern</strong><br>NTPC Limited</div>
         </div>
 
@@ -77,8 +76,8 @@
       <div class="container">
         <h2>Contact Me</h2>
         <form class="contact-form" onsubmit="handleContact(event)">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
           <textarea placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send</button>
         </form>
