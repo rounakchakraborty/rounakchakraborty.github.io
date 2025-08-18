@@ -17,30 +17,48 @@ function showSection(id) {
   });
 
   if (found) {
-    // Keep URL hash in sync and scroll to top
     try { history.replaceState(null, '', '#' + id); } catch {}
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   return false;
 }
 
-// Handle clicks for ANY element that has data-section
+// Intercept clicks ONLY for same-page hash links
 document.addEventListener('click', (e) => {
-  const link = e.target.closest('[data-section]');
+  const link = e.target.closest('a[href]');
   if (!link) return;
 
-  const id = link.getAttribute('data-section');
-  if (!id) return;
+  const href = link.getAttribute('href');
 
-  e.preventDefault();
-  showSection(id);
-  closeMobile();
+  // If it's a pure hash (e.g., "#work") on the SAME page, handle via JS.
+  if (href && href.startsWith('#')) {
+    const id = href.slice(1);
+    e.preventDefault();
+    showSection(id);
+    closeMobile();
+    return;
+  }
+
+  // If it's a full/relative URL with a hash that points to THIS page, also handle.
+  try {
+    const url = new URL(href, location.href);
+    if (url.origin === location.origin && url.pathname === location.pathname && url.hash) {
+      const id = url.hash.slice(1);
+      e.preventDefault();
+      showSection(id);
+      closeMobile();
+      return;
+    }
+  } catch {
+    // bad URL -> let browser handle
+  }
 });
 
 // Open the right section if a hash is present on load
 document.addEventListener('DOMContentLoaded', () => {
   const initial = (location.hash || '#home').replace('#', '');
-  showSection(initial);
+  const sec = document.getElementById(initial);
+  if (sec) showSection(initial);
 });
 
 // ---------- Mobile menu ----------
