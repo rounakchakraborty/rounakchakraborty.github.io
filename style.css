@@ -1,24 +1,27 @@
 /* ===== Variables ===== */
 :root {
-  --bar-height: 72px;           /* header & footer match exactly */
+  --bar-height: 72px;           /* header & footer same height */
   --container-max: 1100px;
 }
 
 /* ===== Reset / Base ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; height: 100%; }
 body {
   background: #fff; color: #111;
   font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 a:visited { color: inherit; }
-[hidden] { display: none !important; }   /* critical: mobile menu stays hidden when it should */
+[hidden] { display: none !important; }
 
 /* Layout container */
-.container { width: min(var(--container-max), 92%); margin-inline: auto; }
+.container { width: min(var(--container-max), 92%); margin-inline: auto; flex: 1; }
 
 /* Accent */
 .highlight { color: #1e90ff; }
@@ -58,9 +61,9 @@ a:visited { color: inherit; }
 }
 .nav-toggle .bar { display:block; height:2px; margin:6px 8px; background:#fff; }
 
-/* Mobile drawer (appears under header) */
+/* Mobile drawer */
 .nav-mobile {
-  position: sticky; top: var(--bar-height);    /* pinned below sticky header */
+  position: sticky; top: var(--bar-height);
   display: grid; gap: 6px;
   padding: 12px 0 16px;
   background: #000; border-top: 1px solid #111;
@@ -69,6 +72,7 @@ a:visited { color: inherit; }
 .nav-mobile a:hover { background: #0c0c0c; }
 
 /* ===== Sections ===== */
+main { flex: 1; }
 .section { display: none; padding: 64px 0; }
 .section.active { display: block; }
 
@@ -79,17 +83,20 @@ h2 { text-align: center; margin-bottom: 28px; font-size: clamp(1.4rem, 1.2vw + 1
 .hero {
   display: grid; grid-template-columns: 1.2fr .8fr;
   gap: 48px; align-items: center;
+  min-height: calc(100vh - (var(--bar-height) * 2)); /* fills viewport minus header/footer */
 }
 .hero-title {
-  font-size: clamp(1.9rem, 3.7vw + 0.8rem, 3.7rem); /* reduced ~20% */
-  font-weight: 900; letter-spacing: -.5px; margin-bottom: 10px;
+  font-size: clamp(1.8rem, 3.2vw + 0.9rem, 3.6rem);
+  font-weight: 900; letter-spacing: -.5px;
+  margin-bottom: 12px;
+  color: #000; /* pitch black */
 }
 .hero-subtitle {
-  font-size: clamp(0.88rem, 1.1vw + 0.64rem, 1.28rem); /* reduced ~20% */
-  opacity: .9;
+  font-size: clamp(0.9rem, 1.1vw + 0.65rem, 1.3rem);
+  color: #444;  /* dark grey */
 }
 .intro-photo img {
-  max-width: 420px;
+  max-width: 400px;
   border-radius: 16px;
   box-shadow: 0 16px 36px rgba(0,0,0,.18);
   margin-left: auto;
@@ -116,8 +123,11 @@ h2 { text-align: center; margin-bottom: 28px; font-size: clamp(1.4rem, 1.2vw + 1
 .contact-form textarea { min-height: 140px; resize: vertical; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #1e90ff; box-shadow: 0 0 0 3px rgba(30,144,255,.12); }
 
-/* ===== Footer (exact same height as header) ===== */
-.site-footer { background: #000; color: #fff; margin-top: 48px; box-shadow: 0 -1px 0 #111 inset; }
+/* ===== Footer ===== */
+.site-footer {
+  background: #000; color: #fff; margin-top: auto; /* stick to bottom */
+  box-shadow: 0 -1px 0 #111 inset;
+}
 .footer-inner {
   min-height: var(--bar-height);
   display: flex; align-items: center; justify-content: center;
