@@ -81,11 +81,11 @@ h2 { text-align: center; margin-bottom: 28px; font-size: clamp(1.4rem, 1.2vw + 1
   gap: 48px; align-items: center;
 }
 .hero-title {
-  font-size: clamp(2.4rem, 4.6vw + 1rem, 4.6rem);
+  font-size: clamp(1.9rem, 3.7vw + 0.8rem, 3.7rem); /* reduced ~20% */
   font-weight: 900; letter-spacing: -.5px; margin-bottom: 10px;
 }
 .hero-subtitle {
-  font-size: clamp(1.1rem, 1.4vw + .8rem, 1.6rem);
+  font-size: clamp(0.88rem, 1.1vw + 0.64rem, 1.28rem); /* reduced ~20% */
   opacity: .9;
 }
 .intro-photo img {
