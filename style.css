@@ -1,8 +1,11 @@
 /* ===== Variables ===== */
 :root {
-  --bar-height: 72px;               /* desktop header/footer height */
+  --bar-height: 72px;                      /* desktop header/footer height */
   --container-max: 1100px;
-  --page-gutter: 32px;              /* one gutter to align header + body */
+
+  /* Unified gutters: use the SAME guides for header + body */
+  --gutter-left: clamp(40px, 6vw, 80px);   /* move content a bit right */
+  --gutter-right: clamp(36px, 5vw, 64px);  /* move nav (and photo) a bit right */
 }
 
 /* ===== Reset / Base ===== */
@@ -24,7 +27,8 @@ a:visited { color: inherit; }
 .container {
   width: min(var(--container-max), 92%);
   margin-inline: auto;
-  padding-inline: var(--page-gutter);  /* exact same gutter used everywhere */
+  padding-left: var(--gutter-left);
+  padding-right: var(--gutter-right);
   flex: 1;
 }
 
@@ -45,7 +49,13 @@ a:visited { color: inherit; }
 
 /* ===== Header ===== */
 .site-header { position: sticky; top: 0; z-index: 1000; background: #000; color: #fff; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; min-height: var(--bar-height); }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: var(--bar-height);
+  /* Make header obey the SAME left/right guides as the body */
+  padding-left: var(--gutter-left);
+  padding-right: var(--gutter-right);
+}
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo-img { height: 38px; }
 .logo-text { font-weight: 800; color: #fff; }
@@ -57,8 +67,11 @@ a:visited { color: inherit; }
 .nav-toggle .bar { display:block; height:2px; margin:6px 8px; background:#fff; }
 
 /* Mobile drawer */
-.nav-mobile { position: sticky; top: var(--bar-height); display: grid; gap: 6px; padding: 12px 0; background: #000; }
-.nav-mobile a { color: #fff; padding: 12px var(--page-gutter); font-weight: 600; }
+.nav-mobile {
+  position: sticky; top: var(--bar-height);
+  display: grid; gap: 6px; padding: 12px 0; background: #000;
+}
+.nav-mobile a { color: #fff; padding: 12px var(--gutter-left); font-weight: 600; }
 
 /* ===== Sections ===== */
 main { flex: 1; }
@@ -68,7 +81,7 @@ main { flex: 1; }
   display: none;
   height: calc(100vh - (var(--bar-height) * 2));
   padding-block: 24px;
-  /* when jumping/activating on mobile, keep content below sticky header */
+  /* keep content below sticky header when jumping on mobile */
   scroll-margin-top: calc(var(--bar-height) + 12px);
 }
 .section.active {
@@ -86,13 +99,13 @@ h2 {
 /* ===== Hero (Home) ===== */
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;      /* brings photo inward */
+  grid-template-columns: 1.1fr 0.9fr;     /* brings photo inward */
   gap: 40px;
   align-items: center;
   width: 100%;
 }
 
-/* keep lines comfortable & aligned with header’s left edge */
+/* keep lines comfortable & aligned with header’s left guide */
 .intro-text { max-width: 720px; }
 
 /* Title + subtitle colors */
@@ -109,11 +122,11 @@ h2 {
   color: #444;
 }
 
-/* Photo: natural rectangle (no stretch), slight rounding, pulled off the edge */
-.intro-photo { justify-self: start; }
+/* Photo: natural rectangle, rounded, align its RIGHT edge with nav guide */
+.intro-photo { justify-self: end; }        /* push photo toward the right guide */
 .intro-photo img {
-  width: 320px;       /* fixed visual width for consistency */
-  height: auto;       /* natural aspect */
+  width: 340px;       /* fixed visual width for consistency on desktop */
+  height: auto;       /* natural aspect, no stretch */
   border-radius: 16px;
   box-shadow: 0 16px 36px rgba(0,0,0,.18);
 }
@@ -151,9 +164,9 @@ h2 {
   .intro-photo img { width: 300px; }
 }
 
-/* Reduce header height & add extra safety offset on small screens */
 @media (max-width: 768px) {
-  :root { --bar-height: 60px; }  /* smaller sticky header/footer on mobile */
+  /* smaller sticky header/footer on mobile */
+  :root { --bar-height: 60px; }
 
   .nav-desktop { display: none; }
   .nav-toggle { display: inline-block; }
@@ -161,10 +174,11 @@ h2 {
   .section {
     height: calc(100vh - (var(--bar-height) * 2));
     padding-block: 20px;
-    scroll-margin-top: calc(var(--bar-height) + 16px);  /* more offset so name never hides */
+    scroll-margin-top: calc(var(--bar-height) + 16px);
   }
 
   .intro-text { max-width: 100%; }
-  .intro-photo img { width: 260px; }  /* a touch smaller on phones */
+  .intro-photo { justify-self: center; }
+  .intro-photo img { width: 260px; }  /* smaller on phones */
   .work-grid { grid-template-columns: 1fr; }
 }
