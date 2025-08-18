@@ -10,29 +10,28 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Left: Logo + Name -->
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="RC Logo" class="logo-img" />
         <span class="logo-text">Rounak Chakraborty</span>
       </a>
-      <!-- Right: Nav -->
+
       <nav class="nav-desktop">
         <a href="index.html#home">Home</a>
         <a href="index.html#work">Work</a>
         <a href="index.html#contact">Contact</a>
         <a href="sitemap.html" aria-current="page">Site Map</a>
       </nav>
+
       <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
     </div>
 
-    <!-- Mobile drawer -->
     <nav class="nav-mobile" id="mobileMenu" hidden>
       <a href="index.html#home" onclick="closeMobile()">Home</a>
       <a href="index.html#work" onclick="closeMobile()">Work</a>
       <a href="index.html#contact" onclick="closeMobile()">Contact</a>
-      <a href="sitemap.html" onclick="closeMobile()">Site Map</a>
+      <a href="sitemap.html" onclick="closeMobile()" aria-current="page">Site Map</a>
     </nav>
   </header>
 
