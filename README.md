@@ -1,6 +1,6 @@
 # 🌐 rounakchakraborty.com
 
-My **personal portfolio website** — built from scratch using **HTML** and **CSS**.  
+My **personal portfolio website** — built from scratch.  
 It highlights my professional journey, interests, and aspirations in a clean, responsive, and SEO-friendly format.
 
 🔗 Live Website: [https://rounakchakraborty.com](https://rounakchakraborty.com)
