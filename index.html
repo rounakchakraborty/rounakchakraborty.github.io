@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rounak Chakraborty | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo" onclick="showSection('home')">
+      <a href="#" class="logo" onclick="showSection('home');return false;">
         <img src="images/logo.png" alt="RC Logo" class="logo-img" />
         <span class="logo-text">Rounak Chakraborty</span>
       </a>
 
       <nav class="nav-desktop">
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('work')">Work</a>
-        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('home');return false;">Home</a>
+        <a href="#" onclick="showSection('work');return false;">Work</a>
+        <a href="#" onclick="showSection('contact');return false;">Contact</a>
         <a href="sitemap.html">Site Map</a>
       </nav>
 
@@ -28,10 +28,11 @@
       </button>
     </div>
 
+    <!-- Mobile drawer -->
     <nav class="nav-mobile" id="mobileMenu" hidden>
-      <a href="#" onclick="closeMobile(); showSection('home')">Home</a>
-      <a href="#" onclick="closeMobile(); showSection('work')">Work</a>
-      <a href="#" onclick="closeMobile(); showSection('contact')">Contact</a>
+      <a href="#" onclick="closeMobile();showSection('home');return false;">Home</a>
+      <a href="#" onclick="closeMobile();showSection('work');return false;">Work</a>
+      <a href="#" onclick="closeMobile();showSection('contact');return false;">Contact</a>
       <a href="sitemap.html" onclick="closeMobile()">Site Map</a>
     </nav>
   </header>
@@ -41,9 +42,7 @@
     <section id="home" class="section active">
       <div class="container hero">
         <div class="intro-text">
-          <h1 class="hero-title">
-            Hello, I’m <span class="highlight">Rounak Chakraborty</span>
-          </h1>
+          <h1 class="hero-title">Hello, I’m <span class="highlight">Rounak Chakraborty</span></h1>
           <p class="hero-subtitle">Management • Technology • Sustainability</p>
         </div>
         <div class="intro-photo">
@@ -64,7 +63,6 @@
           <div class="work-card"><strong>Assistant System Engineer</strong><br>TCS</div>
           <div class="work-card"><strong>Student Intern</strong><br>NTPC Limited</div>
         </div>
-
         <div class="resume-btn">
           <a class="btn" href="documents/Rounak_Chakraborty_Resume.pdf" download>📄 Download Resume</a>
         </div>
@@ -87,7 +85,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>© 2025 Rounak Chakraborty | All Rights Reserved</p>
     </div>
   </footer>
