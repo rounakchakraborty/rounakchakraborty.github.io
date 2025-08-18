@@ -13,11 +13,11 @@ I’m **Rounak Chakraborty (He/Him)** — **Associate, AI & Data at MicroSave Co
 Previously, I worked as an **Assistant Systems Engineer at Tata Consultancy Services (TCS)**.  
 
 🎓 **Education**  
-- **MBA/PGDFM ’25** – [Indian Institute of Forest Management (IIFM), Bhopal](https://iifm.ac.in/home)  
-- **B.Tech. (ECE) ’21** – [Assam Don Bosco University (ADBU)](https://www.dbuniversity.ac.in/)  
+- **MBA/PGDFM ’25** – [Indian Institute of Forest Management](https://iifm.ac.in/home)  
+- **B.Tech. (ECE) ’21** – [Assam Don Bosco University](https://www.dbuniversity.ac.in/)  
 
 🔹 Member – **International Association of Engineers (IAENG)**  
-🔹 Associate Member – **Institution of Engineers (India) [AMIE]**
+🔹 Associate Member – **Institution of Engineers (India) [IEI]**
 
 I solve problems not just with logic, but with **purpose**.  
 For me, sustainability isn’t a checkbox; it’s the lens through which I approach every challenge.  
@@ -26,8 +26,8 @@ For me, sustainability isn’t a checkbox; it’s the lens through which I appro
 
 ## 💼 Professional Experience
 
-- **Associate – AI & Data, MicroSave Consulting (MSC)**  
-- **Assistant Systems Engineer, Tata Consultancy Services (TCS)**  
+- **Associate – AI & Data, MicroSave Consulting**  
+- **Assistant Systems Engineer, Tata Consultancy Services**  
 
 ---
 
