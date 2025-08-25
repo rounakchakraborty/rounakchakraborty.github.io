@@ -122,15 +122,26 @@ h2 {
   align-items: center;
   width: 100%;
 }
-.intro-text { max-width: 720px; }
+.intro-text {
+  max-width: 720px;
+
+  /* New: align the whole intro stack neatly */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* tight, consistent rhythm between title, subtitle, logos */
+}
 .hero-title {
   font-size: clamp(1.8rem, 3.2vw + 0.9rem, 3.6rem);
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 4px; /* slightly tighter since we now use gap */
   color: #444;
 }
 .hero-title .hero-name { color: #000 !important; }
-.hero-subtitle { font-size: clamp(0.9rem, 1.1vw + 0.65rem, 1.3rem); color: #444; }
+.hero-subtitle {
+  font-size: clamp(0.9rem, 1.1vw + 0.65rem, 1.3rem);
+  color: #444;
+}
 .intro-photo { justify-self: end; }
 .intro-photo img {
   width: 272px;
@@ -144,7 +155,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 6px; /* a touch closer to the subtitle for a tight stack */
   flex-wrap: wrap;
 }
 .edu-logo {
@@ -181,13 +192,7 @@ h2 {
   transition: opacity .25s ease, transform .25s ease;
   z-index: 10;
 }
-.edu-tooltip a {
-  color: #1e90ff;
-  font-weight: 600;
-  text-decoration: underline;
-  display: inline-block;
-  margin-top: 4px;
-}
+/* cleaned: removed .edu-tooltip a styles since tooltips now have no links */
 .edu-logo:hover .edu-tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(4px);
@@ -268,7 +273,10 @@ h2 {
     padding-block: 20px;
     scroll-margin-top: calc(var(--bar-height) + 16px);
   }
-  .intro-text { max-width: 100%; }
+
+  /* Center the entire intro stack on mobile */
+  .intro-text { align-items: center; text-align: center; }
+
   .intro-photo { justify-self: center; }
   .intro-photo img { width: 208px; }
   .experience-grid { grid-template-columns: 1fr; }
