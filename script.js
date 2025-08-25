@@ -30,7 +30,7 @@ document.addEventListener('click', (e) => {
 
   const href = link.getAttribute('href');
 
-  // If it's a pure hash (e.g., "#work") on the SAME page, handle via JS.
+  // If it's a pure hash (e.g., "#experience") on the SAME page, handle via JS.
   if (href && href.startsWith('#')) {
     const id = href.slice(1);
     e.preventDefault();
