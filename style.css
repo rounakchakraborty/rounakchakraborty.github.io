@@ -6,6 +6,17 @@
   /* single alignment system used by header AND content */
   --content-left: clamp(60px, 7vw, 100px);
   --content-right: clamp(60px, 7vw, 100px);
+
+  /* Header / footer typography (responsive) */
+  --fs-logo: clamp(1.05rem, 0.45vw + 0.95rem, 1.25rem);
+  --fs-nav: clamp(0.98rem, 0.35vw + 0.9rem, 1.12rem);
+  --fs-nav-mobile: clamp(1.02rem, 0.8vw + 0.9rem, 1.18rem);
+
+  --fs-footer-link: clamp(0.98rem, 0.35vw + 0.9rem, 1.12rem);
+  --fs-footer-copy: clamp(0.9rem, 0.25vw + 0.85rem, 1.02rem);
+
+  --ls-tight: 0.1px;      /* subtle letter-spacing */
+  --ls-tighter: 0.2px;
 }
 
 /* ===== Reset / Base ===== */
@@ -55,10 +66,18 @@ a:visited { color: inherit; }
 }
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo-img { height: 38px; }
-.logo-text { font-weight: 800; color: #fff; font-size: 1.15rem; }
+.logo-text {
+  font-weight: 800; color: #fff;
+  font-size: var(--fs-logo);
+  letter-spacing: var(--ls-tighter);
+}
 
 .nav-desktop { display: flex; align-items: center; gap: 28px; justify-self: end; }
-.nav-desktop a { color: #fff; font-weight: 600; font-size: 1.15rem; }
+.nav-desktop a {
+  color: #fff; font-weight: 600;
+  font-size: var(--fs-nav);
+  letter-spacing: var(--ls-tight);
+}
 .nav-desktop a:hover { color: #1e90ff; }
 
 .nav-toggle {
@@ -75,7 +94,9 @@ a:visited { color: inherit; }
 }
 .nav-mobile a {
   color: #fff; padding: 12px var(--content-left);
-  font-weight: 600; font-size: 1.15rem;
+  font-weight: 600;
+  font-size: var(--fs-nav-mobile);
+  letter-spacing: var(--ls-tight);
 }
 
 /* ===== Sections ===== */
@@ -151,10 +172,19 @@ h2 {
   display: flex; flex-direction: row; justify-content: center; align-items: center;
   gap: 24px; flex-wrap: nowrap; white-space: nowrap;
 }
-.footer-link { color: #fff; opacity: .95; font-weight: 600; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 8px; }
+.footer-link {
+  color: #fff; opacity: .95; font-weight: 600;
+  font-size: var(--fs-footer-link);
+  letter-spacing: var(--ls-tight);
+  display: inline-flex; align-items: center; gap: 8px;
+}
 .footer-link:hover { color: #1e90ff; }
 .footer-link svg { width: 18px; height: 18px; fill: currentColor; display: inline-block; }
-.footer-copy { font-size: 1.15rem; opacity: .9; text-align: center; }
+.footer-copy {
+  font-size: var(--fs-footer-copy);
+  opacity: .9; text-align: center;
+  letter-spacing: var(--ls-tight);
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 1100px) {
