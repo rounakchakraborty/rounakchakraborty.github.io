@@ -11,9 +11,9 @@ permissions:
   pages: write
   id-token: write
 
-# Ensure only the latest push deploys; older in-progress runs are canceled cleanly
+# Cancel any in-flight run of THIS workflow on THIS branch
 concurrency:
-  group: "pages"
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -22,6 +22,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # Recommended by GitHub for Pages builds
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       # Upload everything in the repo root (HTML/CSS/JS, images, docs, etc.)
       - name: Upload static site as artifact
