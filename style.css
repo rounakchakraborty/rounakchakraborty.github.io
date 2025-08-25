@@ -150,6 +150,35 @@ h2 {
   box-shadow: 0 16px 36px rgba(0,0,0,.18);
 }
 
+/* ---- Education logos row (IIFM + ADBU) ---- */
+.edu-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.edu-logos a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+  opacity: 0.95;
+}
+.edu-logos a:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  opacity: 1;
+}
+.edu-logos img {
+  height: 44px;           /* consistent visual height */
+  width: auto;            /* preserve logo aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
 /* ===== Experience ===== */
 .experience-grid { 
   display: grid; 
@@ -241,4 +270,7 @@ h2 {
   /* smaller footer text for mobile for neat wrapping */
   .footer-link { font-size: 0.95rem; }
   .footer-copy { font-size: 0.85rem; }
+
+  /* center the logos on small screens for symmetry */
+  .edu-logos { justify-content: center; }
 }
