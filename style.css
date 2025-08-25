@@ -125,16 +125,16 @@ h2 {
 .intro-text {
   max-width: 720px;
 
-  /* New: align the whole intro stack neatly */
+  /* align the whole intro stack neatly */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px; /* tight, consistent rhythm between title, subtitle, logos */
+  gap: 8px;
 }
 .hero-title {
   font-size: clamp(1.8rem, 3.2vw + 0.9rem, 3.6rem);
   font-weight: 900;
-  margin-bottom: 4px; /* slightly tighter since we now use gap */
+  margin-bottom: 4px;
   color: #444;
 }
 .hero-title .hero-name { color: #000 !important; }
@@ -155,7 +155,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 6px; /* a touch closer to the subtitle for a tight stack */
+  /* increased spacing below subtitle */
+  margin-top: 18px;
   flex-wrap: wrap;
 }
 .edu-logo {
