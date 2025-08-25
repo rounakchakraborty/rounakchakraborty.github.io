@@ -10,13 +10,13 @@
   <!-- ✅ Compelling meta description (≤155 chars) -->
   <meta name="description" content="Portfolio of Rounak Chakraborty: experience across management, technology, and sustainability. Professional background, projects, and ways to get in touch." />
 
-  <!-- ✅ Canonical URL (replace YOUR-DOMAIN with your actual domain from CNAME) -->
+  <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://YOUR-DOMAIN/" />
 
   <!-- ✅ Help crawlers discover your sitemap -->
   <link rel="sitemap" type="application/xml" href="https://YOUR-DOMAIN/sitemap.xml" />
 
-  <!-- ✅ Social share cards (Open Graph + Twitter) -->
+  <!-- ✅ Social share cards -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Rounak Chakraborty — Management, Technology & Sustainability" />
   <meta property="og:description" content="Explore experience, projects, and contact details." />
@@ -61,7 +61,7 @@
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
 
-  <!-- ✅ Cache-busting query so updates aren’t cached forever -->
+  <!-- Cache-busting query -->
   <link rel="stylesheet" href="style.css?v=1" />
   <script defer src="script.js?v=1"></script>
 </head>
@@ -69,7 +69,7 @@
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <!-- Left: Logo + Name (linked to root for crawlers) -->
+      <!-- Left: Logo + Name -->
       <a href="/" class="logo" aria-label="Rounak Chakraborty — Home">
         <img src="images/logo.png" alt="RC logo" class="logo-img" width="38" height="38" />
         <span class="logo-text">Rounak Chakraborty</span>
@@ -102,14 +102,22 @@
     <section id="home" class="section active" aria-hidden="false">
       <div class="container hero">
         <div class="intro-text">
-          <!-- ✅ One clear H1 with keywords -->
           <h1 class="hero-title">
             <span style="color:#444;">Hello, I’m</span> <span class="hero-name">Rounak Chakraborty</span>
           </h1>
           <p class="hero-subtitle">Management • Technology • Sustainability</p>
+
+          <!-- New logos row -->
+          <div class="edu-logos">
+            <a href="https://iifm.ac.in/home" target="_blank" rel="noopener noreferrer">
+              <img src="images/IIFM.png" alt="IIFM Logo" width="120" height="auto" />
+            </a>
+            <a href="https://dbuniversity.ac.in/" target="_blank" rel="noopener noreferrer">
+              <img src="images/ADBU.png" alt="ADBU Logo" width="120" height="auto" />
+            </a>
+          </div>
         </div>
         <div class="intro-photo">
-          <!-- ✅ Width/height + lazy for CLS/Web Vitals -->
           <img
             src="images/rounak.jpg"
             alt="Portrait of Rounak Chakraborty"
@@ -148,7 +156,6 @@
           </div>
         </div>
         <div class="resume-btn">
-          <!-- ✅ File type hints + accessible label -->
           <a class="btn" href="documents/Rounak_Chakraborty_Resume.pdf" download
              aria-label="Download resume PDF">
              Download Resume
