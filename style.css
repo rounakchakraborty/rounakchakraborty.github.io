@@ -165,10 +165,11 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+/* UNIFORM LOGO SIZES */
 .edu-logos img {
-  height: 44px;
-  width: auto;
-  object-fit: contain;
+  width: 56px;         /* uniform square size */
+  height: 56px;
+  object-fit: contain; /* keep aspect ratios inside the box */
   display: block;
 }
 
@@ -285,4 +286,10 @@ h2 {
   .footer-link { font-size: 0.95rem; }
   .footer-copy { font-size: 0.85rem; }
   .edu-logos { justify-content: center; }
+
+  /* smaller uniform logo size on mobile */
+  .edu-logos img {
+    width: 48px;
+    height: 48px;
+  }
 }
