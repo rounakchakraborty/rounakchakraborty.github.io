@@ -1,6 +1,6 @@
 /* ===== Variables ===== */
 :root {
-  --bar-height: 72px;
+  --bar-height: 64px; /* was 72px -> slimmer header */
   --container-max: 1100px;
 
   /* single alignment system used by header AND content */
@@ -58,7 +58,7 @@ a:visited { color: inherit; }
 .resume-btn {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin: 12px 0 28px; /* add bottom room so it doesn't kiss the footer */
 }
 .resume-btn .btn { color: #fff !important; }
 
@@ -73,7 +73,7 @@ a:visited { color: inherit; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
-  min-height: var(--bar-height);
+  min-height: var(--bar-height); /* now 64px */
 }
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo-img { height: 38px; }
@@ -227,7 +227,7 @@ h2 {
   transform: translateY(-4px);
   box-shadow: 0 10px 28px rgba(0,0,0,.08);
   border-color: #ddd;
-  z-index: 20;           /* ✅ lift card above neighbors so tooltip isn’t buried */
+  z-index: 20;           /* lift card above neighbors so tooltip isn’t buried */
 }
 
 .experience-card img {
@@ -283,13 +283,13 @@ h2 {
 .footer-inner {
   width: min(var(--container-max), 92%);
   margin-inline: auto;
-  min-height: calc(var(--bar-height) + 10px);
+  min-height: calc(var(--bar-height)); /* was +10px -> tighter footer */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 20px;
+  padding: 14px; /* was 20px -> slimmer footer */
 }
 .footer-links {
   display: flex; flex-direction: row; justify-content: center; align-items: center;
@@ -320,7 +320,7 @@ h2 {
   .experience-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  :root { --bar-height: 60px; }
+  :root { --bar-height: 52px; } /* was 60px -> slimmer header on mobile */
   .nav-desktop { display: none; }
   .nav-toggle { display: inline-block; justify-self: end; }
   .section {
