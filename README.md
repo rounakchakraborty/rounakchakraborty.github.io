@@ -1,6 +1,6 @@
 # 🌐 rounakchakraborty.com
 
-My **personal portfolio website** — built from scratch.  
+My **personal portfolio website** - built from scratch.  
 It highlights my professional journey, interests, and aspirations in a clean, responsive, and SEO-friendly format.
 
 🔗 Live Website: [https://rounakchakraborty.com](https://rounakchakraborty.com)
@@ -9,12 +9,12 @@ It highlights my professional journey, interests, and aspirations in a clean, re
 
 ## 👨‍💼 About Me
 
-I’m **Rounak Chakraborty (He/Him)** — **Associate, AI & Data at MicroSave Consulting (MSC)**.  
-Previously, I worked as an **Assistant Systems Engineer at Tata Consultancy Services (TCS)**.  
+I’m **Rounak Chakraborty (He/Him)** - **Associate, AI & Data at MicroSave Consulting**.  
+Previously, I worked as an **Assistant Systems Engineer at Tata Consultancy Services**.  
 
 🎓 **Education**  
-- **MBA/PGDFM ’25** – [Indian Institute of Forest Management](https://iifm.ac.in/home)  
-- **B.Tech. (ECE) ’21** – [Assam Don Bosco University](https://www.dbuniversity.ac.in/)  
+- **PGDFM (MBA Eqv.) ’25** – [Indian Institute of Forest Management](https://iifm.ac.in/home)  
+- **BTech (ECE) ’21** – [Assam Don Bosco University](https://www.dbuniversity.ac.in/)  
 
 🔹 Member – **International Association of Engineers (IAENG)**  
 🔹 Associate Member – **Institution of Engineers (India) [IEI]**
@@ -39,8 +39,7 @@ For me, sustainability isn’t a checkbox; it’s the lens through which I appro
 - **Python Programming Expert** – Edureka  
 - **Six Sigma White Belt** – CSSC  
 - **Google Project Management Specialization** – Google  
-- **Google AI Essentials** – Google  
-- **ignio Foundation Certified** – Digitate (Expired)  
+- **Google AI Essentials** – Google   
 
 *(Full list on [LinkedIn](https://linkedin.com/in/rounakchakraborty))*  
 
