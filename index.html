@@ -244,19 +244,25 @@
       <div class="container">
         <h2>Contact Me</h2>
 
-        <!-- 👇 Replaced the old form with your Google Form embed -->
-        <div class="form-embed">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScbeZgJ5paw6RATjBsCbIzCqJFqeAgSB2OQmyqzSGeDXP6N2g/viewform?embedded=true"
-            width="640"
-            height="716"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            title="Contact form"
-          >Loading…</iframe>
-        </div>
+        <!-- FormSubmit form (replaces Google Form iframe) -->
+        <form
+          action="https://formsubmit.co/rcwordmail@gmail.com"
+          method="POST"
+          class="contact-form"
+          aria-label="Contact form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+          <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+          <textarea name="message" placeholder="Your Message" required></textarea>
 
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_subject" value="New message from portfolio site" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://rounakchakraborty.com/#contact" />
+
+          <button type="submit" class="btn">Send</button>
+        </form>
       </div>
     </section>
   </main>
