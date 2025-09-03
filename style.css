@@ -53,6 +53,13 @@ a:visited { color: inherit; }
 }
 .btn:hover { background: #1e90ff; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(30,144,255,.25); }
 .btn:visited { color: #fff; }
+
+/* Center the resume button wrapper reliably */
+.resume-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
 .resume-btn .btn { color: #fff !important; }
 
 /* ===== Header ===== */
@@ -213,16 +220,18 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
-  overflow: visible;   /* ✅ allow tooltip to escape */
+  overflow: visible;     /* let tooltip overflow rows */
+  z-index: 0;            /* base stacking */
 }
 .experience-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 28px rgba(0,0,0,.08);
   border-color: #ddd;
+  z-index: 20;           /* ✅ lift card above neighbors so tooltip isn’t buried */
 }
 
 .experience-card img {
-  width: 120px;   /* ✅ bigger logos */
+  width: 120px;
   height: 120px;
   object-fit: contain;
   filter: grayscale(18%);
@@ -252,7 +261,7 @@ h2 {
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
-  z-index: 9999;   /* ✅ ensure above everything */
+  z-index: 9999;         /* stays above content inside the same card */
 }
 .experience-card:hover .xp-tooltip {
   opacity: 1;
@@ -331,5 +340,5 @@ h2 {
   .edu-logos { justify-content: center; }
 
   .edu-logos img { width: 48px; height: 48px; }
-  .experience-card img { width: 90px; height: 90px; } /* ✅ bigger on mobile too */
+  .experience-card img { width: 90px; height: 90px; }
 }
