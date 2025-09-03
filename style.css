@@ -111,8 +111,8 @@ main { flex: 1; }
 .section {
   display: none;
   height: calc(100vh - (var(--bar-height) * 2));
-  padding-block: 32px; /* was 24px -> a bit more breathing room */
-  scroll-margin-top: calc(var(--bar-height) + 24px); /* bigger anchor offset to avoid clipping */
+  padding-block: 40px; /* was 32px -> extra room so headings aren't clipped */
+  scroll-margin-top: calc(var(--bar-height) + 40px); /* was + 24px */
 }
 .section.active { display: flex; align-items: center; }
 h2 {
@@ -340,8 +340,8 @@ h2 {
   .section {
     height: auto;
     min-height: calc(100vh - (var(--bar-height) * 2));
-    padding-block: 28px; /* a touch less than desktop but still roomy */
-    scroll-margin-top: calc(var(--bar-height) + 24px);
+    padding-block: 32px; /* was 28px */
+    scroll-margin-top: calc(var(--bar-height) + 32px); /* was + 24px */
   }
 
   .intro-text { align-items: center; text-align: center; }
@@ -356,7 +356,4 @@ h2 {
 
   .edu-logos img { width: 48px; height: 48px; }
   .experience-card img { width: 90px; height: 90px; }
-
-  /* Google Form height tweak on small screens (unused now) */
-  .form-embed iframe { height: 75vh; }
 }
