@@ -111,8 +111,8 @@ main { flex: 1; }
 .section {
   display: none;
   height: calc(100vh - (var(--bar-height) * 2));
-  padding-block: 24px;
-  scroll-margin-top: calc(var(--bar-height) + 12px);
+  padding-block: 32px; /* was 24px -> a bit more breathing room */
+  scroll-margin-top: calc(var(--bar-height) + 24px); /* bigger anchor offset to avoid clipping */
 }
 .section.active { display: flex; align-items: center; }
 h2 {
@@ -283,13 +283,13 @@ h2 {
 .footer-inner {
   width: min(var(--container-max), 92%);
   margin-inline: auto;
-  min-height: calc(var(--bar-height)); /* was +10px -> tighter footer */
+  min-height: calc(var(--bar-height)); /* tighter footer */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 14px; /* was 20px -> slimmer footer */
+  padding: 14px; /* slimmer footer */
 }
 .footer-links {
   display: flex; flex-direction: row; justify-content: center; align-items: center;
@@ -320,14 +320,14 @@ h2 {
   .experience-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  :root { --bar-height: 52px; } /* was 60px -> slimmer header on mobile */
+  :root { --bar-height: 52px; } /* slimmer header on mobile */
   .nav-desktop { display: none; }
   .nav-toggle { display: inline-block; justify-self: end; }
   .section {
     height: auto;
     min-height: calc(100vh - (var(--bar-height) * 2));
-    padding-block: 20px;
-    scroll-margin-top: calc(var(--bar-height) + 16px);
+    padding-block: 28px; /* a touch less than desktop but still roomy */
+    scroll-margin-top: calc(var(--bar-height) + 24px);
   }
 
   .intro-text { align-items: center; text-align: center; }
