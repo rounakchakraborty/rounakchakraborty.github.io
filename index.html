@@ -92,7 +92,7 @@
             <span style="color:#444;">Hello, I’m</span> <span class="hero-name">Rounak Chakraborty</span>
           </h1>
 
-          <!-- 👇 Moved to appear AFTER the H1 -->
+          <!-- 👇 Welcome line (kept as-is) -->
           <p class="welcome-line">Welcome to my portfolio site</p>
 
           <p class="hero-subtitle">Management • Technology • Sustainability</p>
@@ -243,12 +243,20 @@
     <section id="contact" class="section" aria-hidden="true" hidden>
       <div class="container">
         <h2>Contact Me</h2>
-        <form class="contact-form" onsubmit="handleContact(event)" aria-label="Contact form">
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
-          <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send</button>
-        </form>
+
+        <!-- 👇 Replaced the old form with your Google Form embed -->
+        <div class="form-embed">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScbeZgJ5paw6RATjBsCbIzCqJFqeAgSB2OQmyqzSGeDXP6N2g/viewform?embedded=true"
+            width="640"
+            height="716"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Contact form"
+          >Loading…</iframe>
+        </div>
+
       </div>
     </section>
   </main>
