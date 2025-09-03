@@ -111,8 +111,10 @@ main { flex: 1; }
 .section {
   display: none;
   height: calc(100vh - (var(--bar-height) * 2));
-  padding-block: 40px; /* was 32px -> extra room so headings aren't clipped */
-  scroll-margin-top: calc(var(--bar-height) + 40px); /* was + 24px */
+  /* ⬇️ increased to ensure headings don't sit under the sticky header */
+  padding-block: 56px; /* was 40px */
+  /* ⬇️ bigger anchor offset so #experience scrolls lower */
+  scroll-margin-top: calc(var(--bar-height) + 72px); /* was +40px */
 }
 .section.active { display: flex; align-items: center; }
 h2 {
@@ -205,7 +207,6 @@ h2 {
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s ease, transform .25s ease;
-  z-index: 10;
 }
 .edu-logo:hover .edu-tooltip {
   opacity: 1;
@@ -340,8 +341,9 @@ h2 {
   .section {
     height: auto;
     min-height: calc(100vh - (var(--bar-height) * 2));
-    padding-block: 32px; /* was 28px */
-    scroll-margin-top: calc(var(--bar-height) + 32px); /* was + 24px */
+    /* keep comfy spacing & offset on small screens too */
+    padding-block: 48px; /* was 32px */
+    scroll-margin-top: calc(var(--bar-height) + 56px); /* was +32px */
   }
 
   .intro-text { align-items: center; text-align: center; }
