@@ -137,7 +137,7 @@ h2 {
   gap: 8px;
 }
 
-/* 👇 New welcome line style */
+/* New welcome line style */
 .welcome-line {
   font-size: 1.05rem;
   color: #666;
@@ -288,6 +288,10 @@ h2 {
 }
 .contact-form textarea { min-height: 140px; }
 
+/* NEW: Google Form embed responsiveness */
+.form-embed { max-width: 760px; margin: 0 auto; }
+.form-embed iframe { width: 100%; height: 80vh; border: 0; }
+
 /* ===== Footer ===== */
 .site-footer { background: #000; color: #fff; margin-top: auto; }
 .footer-inner {
@@ -341,7 +345,7 @@ h2 {
   }
 
   .intro-text { align-items: center; text-align: center; }
-  .welcome-line { text-align: center; } /* ✅ keep centered on mobile */
+  .welcome-line { text-align: center; }
   .intro-photo { justify-self: center; }
   .intro-photo img { width: 208px; }
 
@@ -352,4 +356,7 @@ h2 {
 
   .edu-logos img { width: 48px; height: 48px; }
   .experience-card img { width: 90px; height: 90px; }
+
+  /* Google Form height tweak on small screens */
+  .form-embed iframe { height: 75vh; }
 }
