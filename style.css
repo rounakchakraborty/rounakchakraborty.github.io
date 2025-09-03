@@ -162,7 +162,6 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-/* UNIFORM LOGO SIZES */
 .edu-logos img {
   width: 56px;
   height: 56px;
@@ -204,7 +203,6 @@ h2 {
   margin: 12px 0 24px;
 }
 
-/* tile container */
 .experience-card {
   position: relative;
   background: #fff;
@@ -215,6 +213,7 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  overflow: visible;   /* ✅ allow tooltip to escape */
 }
 .experience-card:hover {
   transform: translateY(-4px);
@@ -222,10 +221,9 @@ h2 {
   border-color: #ddd;
 }
 
-/* uniform logo size */
 .experience-card img {
-  width: 92px;
-  height: 92px;
+  width: 120px;   /* ✅ bigger logos */
+  height: 120px;
   object-fit: contain;
   filter: grayscale(18%);
   opacity: 0.98;
@@ -234,28 +232,27 @@ h2 {
 .experience-card:hover img {
   filter: none;
   opacity: 1;
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
-/* tooltip for experience tiles */
 .xp-tooltip {
   position: absolute;
-  bottom: -64px;
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   background: #111;
   color: #fff;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   padding: 8px 12px;
   border-radius: 8px;
   text-align: center;
   line-height: 1.35;
   width: max-content;
-  max-width: 260px;
+  max-width: 280px;
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
-  z-index: 5;
+  z-index: 9999;   /* ✅ ensure above everything */
 }
 .experience-card:hover .xp-tooltip {
   opacity: 1;
@@ -324,9 +321,7 @@ h2 {
     scroll-margin-top: calc(var(--bar-height) + 16px);
   }
 
-  /* Center the entire intro stack on mobile */
   .intro-text { align-items: center; text-align: center; }
-
   .intro-photo { justify-self: center; }
   .intro-photo img { width: 208px; }
 
@@ -335,7 +330,6 @@ h2 {
   .footer-copy { font-size: 0.85rem; }
   .edu-logos { justify-content: center; }
 
-  /* smaller sizes on mobile */
   .edu-logos img { width: 48px; height: 48px; }
-  .experience-card img { width: 72px; height: 72px; }
+  .experience-card img { width: 90px; height: 90px; } /* ✅ bigger on mobile too */
 }
