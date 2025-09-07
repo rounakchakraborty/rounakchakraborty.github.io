@@ -148,7 +148,8 @@
           </div>
         </div>
 
-        <div class="intro-photo">
+        <!-- 🔹 Modified portrait section -->
+        <div class="intro-photo no-save">
           <img
             src="images/rounak.jpg"
             alt="Portrait of Rounak Chakraborty"
@@ -156,6 +157,8 @@
             height="340"
             loading="eager"
             fetchpriority="high"
+            oncontextmenu="return false;"
+            ondragstart="return false;"
           />
         </div>
       </div>
@@ -248,7 +251,7 @@
       <div class="container">
         <h2>Contact Me</h2>
 
-        <!-- FormSubmit form (replaces Google Form iframe) -->
+        <!-- FormSubmit form -->
         <form
           action="https://formsubmit.co/rcwordmail@gmail.com"
           method="POST"
